@@ -2,6 +2,8 @@
 
 > 前提，你熟悉云服务器ssh连接终端的用法，和基础的python语法(有js基础也可)
 
+> 如需技术咨询或支持，可联系我～ 见本文末尾
+
 本文采用python量化机器人框架 freqtrade 开始操作！
 
 [freqtrade官方文档](https://www.freqtrade.io/en/stable/)
@@ -442,3 +444,4 @@ docker compose up -d
 
 [@recover2025](https://t.me/recover2025)
 
+或微信号 recoverLIF
