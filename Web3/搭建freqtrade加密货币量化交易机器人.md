@@ -502,5 +502,3 @@ Day (count)      USDT           CNY           Profit %
 如需帮助，可在 telegram 上联系我
 
 [@recover2025](https://t.me/recover2025)
-
-或微信号 recoverLIF
