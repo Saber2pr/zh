@@ -443,3 +443,5 @@ docker compose up -d
 如需帮助，可在 telegram 上联系我
 
 [@recover2025](https://t.me/recover2025)
+
+或邮件 saber2pr@gmail.com
