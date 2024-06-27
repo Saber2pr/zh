@@ -430,9 +430,8 @@ docker compose up -d
 推荐策略网站：
 
 1. https://freqst.com/
-2. https://strat.ninja/ranking.php
 
-这两个网站上可以找到很多不错的策略拿来参考。
+这个网站上可以找到很多不错的策略拿来参考。
 
 ### 回测
 
