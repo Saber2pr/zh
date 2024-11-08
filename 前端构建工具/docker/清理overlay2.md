@@ -1,98 +1,74 @@
 ```sh
 #!/bin/bash
-[[ $(id -u) -eq 0 ]] || exec sudo /bin/bash -c "$(printf '%q ' "$BASH_SOURCE" "$@")"
-progname=$(basename $0)
-quiet=false
-no_dry_run=false
-while getopts ":qn" opt
-do
-    case "$opt" in
-      q)
-          quiet=true
-          ;;
-      n)
-          no_dry_run=true
-          ;;
-      ?)
-          echo "unexpected option ${opt}"
-          echo "usage: ${progname} [-q|--quiet]"
-          echo "    -q: no output"
-          echo "    -n: no dry run (will remove unused directories)"
-          exit 1
-          ;;
-    esac
-done
-shift "$(($OPTIND -1))"
 
-[[ ${quiet} = false ]] || exec /bin/bash -c "$(printf '%q ' "$BASH_SOURCE" "$@")" > /dev/null
+# Define the overlay2 directory
+overlay_dir="/var/lib/docker/overlay2"
 
-echo "Running as: $(id -un)"
-
-progress_bar() {
-    local w=80 p=$1;  shift
-    # create a string of spaces, then change them to dots
-    printf -v dots "%*s" "$(( $p*$w/100 ))" ""; dots=${dots// /.};
-    # print those dots on a fixed-width space plus the percentage etc.
-    printf "\r\e[K|%-*s| %3d %% %s" "$w" "$dots" "$p" "$*";
-}
-
-cd /var/lib/docker/overlay2
-echo cleaning in ${PWD}
-i=1
-spi=1
-sp="/-\|"
-directories=( $(find . -mindepth 1 -maxdepth 1 -type d | cut -d/ -f2) )
-images=( $(docker image ls --all --format "{{.ID}}") )
-total=$((${#directories[@]} * ${#images[@]}))
-used=()
-for d in "${directories[@]}"
-do
-    for id in ${images[@]}
-    do
-        ((++i))
-        progress_bar "$(( ${i} * 100 / ${total}))" "scanning for used directories ${sp:spi++%${#sp}:1} "
-        docker inspect $id | grep -q $d
-        if [ $? ]
-        then
-            used+=("$d")
-            i=$(( $i + $(( ${#images[@]} - $(( $i % ${#images[@]} )) )) ))
-            break
-        fi
-    done
-done
-echo -e "\b\b " # get rid of spinner
-i=1
-used=($(printf '%s\n' "${used[@]}" | sort -u))
-unused=( $(find . -mindepth 1 -maxdepth 1 -type d | cut -d/ -f2) )
-for d in "${used[@]}"
-do
-    ((++i))
-    progress_bar "$(( ${i} * 100 / ${#used[@]}))" "scanning for unused directories ${sp:spi++%${#sp}:1} "
-    for uni in "${!unused[@]}"
-    do
-        if [[ ${unused[uni]} = $d ]]
-        then
-            unset 'unused[uni]'
-            break;
-        fi
-    done
-done
-echo -e "\b\b " # get rid of spinner
-if [ ${#unused[@]} -gt 0 ]
-then
-    [[ ${no_dry_run} = true ]] || echo "Could remove:  (to automatically remove, use the -n, "'"'"no-dry-run"'"'" flag)"
-    for d in "${unused[@]}"
-    do
-        if [[ ${no_dry_run} = true ]]
-        then
-            echo "Removing $(realpath ${d})"
-            rm -rf ${d}
-        else
-            echo " $(realpath ${d})"
-        fi
-    done
-    echo Done
-else
-    echo "All directories are used, nothing to clean up."
+# Verify that the overlay2 directory exists
+if [ ! -d "$overlay_dir" ]; then
+  echo "The directory $overlay_dir does not exist. Please check the path."
+  exit 1
 fi
+
+# Get all layer IDs associated with current containers (MergedDir, LowerDir, UpperDir, WorkDir)
+container_layer_ids=$(docker ps -qa | xargs docker inspect --format '{{ .GraphDriver.Data.MergedDir }} {{ .GraphDriver.Data.LowerDir }} {{ .GraphDriver.Data.UpperDir }} {{ .GraphDriver.Data.WorkDir }}' | tr ' ' '\n' | tr ':' '\n' | awk -F'/' '{print $(NF-1)}' | sort | uniq)
+
+# Get all layer IDs associated with images
+image_layer_ids=$(docker images -qa | xargs docker inspect --format '{{ .GraphDriver.Data.MergedDir }} {{ .GraphDriver.Data.LowerDir }} {{ .GraphDriver.Data.UpperDir }} {{ .GraphDriver.Data.WorkDir }}' | tr ' ' '\n' | tr ':' '\n' | awk -F'/' '{print $(NF-1)}' | sort | uniq)
+
+# Get all cache IDs of type source.local
+source_local_cache_ids=$(docker system df -v | grep 'source.local' | awk '{print $1}' | sort | uniq)
+
+# Combine the layer IDs of containers, images, and source.local caches
+all_layer_ids=$(echo -e "$container_layer_ids\n$image_layer_ids" | sort | uniq)
+
+# Verify if the retrieval of layer IDs was successful
+if [ -z "$all_layer_ids" ]; then
+  echo "Error: Could not retrieve the directories of MergedDir, LowerDir, UpperDir, WorkDir, or source.local caches."
+  echo "Aborting to avoid accidental deletion of directories."
+  exit 1
+fi
+
+echo "source_local_cache_ids:"
+echo "$source_local_cache_ids"
+
+echo "all_layer_ids:"
+echo "$all_layer_ids"
+
+# List all subdirectories in overlay2
+overlay_subdirs=$(ls -1 $overlay_dir)
+
+# Find and remove orphan directories that are not in the list of active layers or caches
+echo "Searching for and removing orphan directories in $overlay_dir..."
+
+for dir in $overlay_subdirs; do
+  # Ignore directories ending in "-init" and the "l" directory
+  if [[ "$dir" == *"-init" ]] || [[ "$dir" == "l" ]]; then
+    echo "Ignoring special directory: $overlay_dir/$dir"
+    continue
+  fi
+
+  # Check if the directory name starts with any of the source.local cache IDs
+  preserve_dir=false
+  for cache_id in $source_local_cache_ids; do
+    if [[ "$dir" == "$cache_id"* ]]; then
+      preserve_dir=true
+      break
+    fi
+  done
+
+  # If directory should be preserved, skip it
+  if $preserve_dir; then
+    echo "Preserving cache directory: $overlay_dir/$dir"
+    continue
+  fi
+
+  # Check if the directory is associated with an active container or image
+  if ! echo "$all_layer_ids" | grep -q "$dir"; then
+    echo "Removing orphan directory: $overlay_dir/$dir"
+    # rm -rf "$overlay_dir/$dir"
+  fi
+done
+
+echo "Process completed."
 ```
