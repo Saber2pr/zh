@@ -21,7 +21,7 @@ function FormModal<T>({
   modalProps,
   formProps,
 }: FormModal<T>) {
-  const [form] = Form.useForm();
+  const [form] = Form.useForm(formProps?.form);
   const [loading, setLoading] = useState(false);
   return (
     <Modal
@@ -34,7 +34,7 @@ function FormModal<T>({
     >
       <Form
         {...formProps}
-        onFinish={async (values) => {
+        onFinish={async values => {
           try {
             setLoading(true);
             await onOk(values);
