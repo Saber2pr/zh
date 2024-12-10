@@ -1,8 +1,10 @@
 ```tsx
 import { Form, Modal, ModalProps, FormProps } from 'antd';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { getArray } from 'src/utils/kit';
 
 export interface FormModal<T> {
+  initValues: T;
   visible: boolean;
   onCancel: VoidFunction;
   onOk: (values: T) => any;
@@ -10,6 +12,7 @@ export interface FormModal<T> {
   title: string;
   modalProps?: ModalProps;
   formProps?: FormProps;
+  formDeps?: any[];
 }
 
 function FormModal<T>({
@@ -20,9 +23,18 @@ function FormModal<T>({
   title,
   modalProps,
   formProps,
+  formDeps,
+  initValues,
 }: FormModal<T>) {
   const [form] = Form.useForm(formProps?.form);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (initValues) {
+      form.setFieldsValue(initValues);
+    }
+  }, [...getArray(formDeps), ...Object.values(initValues || {})]);
+
   return (
     <Modal
       {...modalProps}
@@ -34,6 +46,7 @@ function FormModal<T>({
     >
       <Form
         {...formProps}
+        initialValues={initValues}
         onFinish={async values => {
           try {
             setLoading(true);
@@ -60,9 +73,17 @@ export interface UseFormModal<T> {
   title: string;
   modalProps?: ModalProps;
   formProps?: FormProps;
+  formDeps?: any[];
 }
 
-export function useFormModal<T>({ forms, onOk, title, ...props }: UseFormModal<T>) {
+export function useFormModal<T>({
+  forms,
+  onOk,
+  title,
+  formDeps,
+  initValues,
+  ...props
+}: UseFormModal<T>) {
   const [show, setShow] = useState(false);
 
   return {
@@ -76,6 +97,8 @@ export function useFormModal<T>({ forms, onOk, title, ...props }: UseFormModal<T
         visible={show}
         onCancel={() => setShow(false)}
         onOk={onOk}
+        formDeps={formDeps}
+        initValues={initValues}
       />
     ),
   };
