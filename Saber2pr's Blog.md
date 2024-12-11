@@ -1,4 +1,4 @@
-![loading](https://saber2pr.top/MyWeb/resource/image/blog-bg.webp)
+b![loading](https://saber2pr.top/MyWeb/resource/image/blog-bg.webp)
 
 > 既视感？
 
@@ -20,10 +20,10 @@
 
 ---
 
-推荐阅读：
-- [vscode 插件系列](/blog/VSCode插件开发/vscode插件编写教程)
-- [事件冒泡与 Portals](/blog/React原理/事件冒泡与Portals)
-- [useState 使用 props 初始化的注意点](/blog/React原理/useState使用props初始化的注意点)
-- [useSelector 和 reselect 源码阅读](/blog/React生态/useSelector和reselect源码阅读)
-- [对比 Monad 在 TS 和 Haskell 中的使用](/blog/Typescript基础/对比Monad在TS和Haskell中的使用)
-- [依赖注入（IOC）实现](/blog/Reflect反射原理/依赖注入（IOC）实现)
+推荐阅读：<br/>
+[vscode 插件系列](/blog/VSCode插件开发/vscode插件编写教程) <br/>
+[事件冒泡与 Portals](/blog/React原理/事件冒泡与Portals) <br/>
+[useState 使用 props 初始化的注意点](/blog/React原理/useState使用props初始化的注意点) <br/>
+[useSelector 和 reselect 源码阅读](/blog/React生态/useSelector和reselect源码阅读) <br/>
+[对比 Monad 在 TS 和 Haskell 中的使用](/blog/Typescript基础/对比Monad在TS和Haskell中的使用) <br/>
+[依赖注入（IOC）实现](/blog/Reflect反射原理/依赖注入（IOC）实现) <br/>
