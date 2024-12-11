@@ -1,4 +1,4 @@
-b![loading](https://saber2pr.top/MyWeb/resource/image/blog-bg.webp)
+![loading](https://saber2pr.top/MyWeb/resource/image/blog-bg.webp)
 
 > 既视感？
 
@@ -20,10 +20,10 @@ b![loading](https://saber2pr.top/MyWeb/resource/image/blog-bg.webp)
 
 ---
 
-推荐阅读：<br/>
-[vscode 插件系列](/blog/VSCode插件开发/vscode插件编写教程) <br/>
-[事件冒泡与 Portals](/blog/React原理/事件冒泡与Portals) <br/>
-[useState 使用 props 初始化的注意点](/blog/React原理/useState使用props初始化的注意点) <br/>
-[useSelector 和 reselect 源码阅读](/blog/React生态/useSelector和reselect源码阅读) <br/>
-[对比 Monad 在 TS 和 Haskell 中的使用](/blog/Typescript基础/对比Monad在TS和Haskell中的使用) <br/>
-[依赖注入（IOC）实现](/blog/Reflect反射原理/依赖注入（IOC）实现) <br/>
+推荐阅读：
+- [vscode 插件系列](/zh/posts/2964907711/3615466745/)
+- [事件冒泡与 Portals](/zh/posts/93045664/2799513546/)
+- [useState 使用 props 初始化的注意点](/zh/posts/93045664/2832757990/)
+- [useSelector 和 reselect 源码阅读](/zh/posts/3078029389/3685947818/)
+- [对比 Monad 在 TS 和 Haskell 中的使用](/zh/posts/3300794385/2162349897/)
+- [依赖注入（IOC）实现](/zh/posts/3417095202/2381535473/)
