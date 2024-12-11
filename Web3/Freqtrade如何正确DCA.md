@@ -76,6 +76,7 @@ $$
 初始资金可以这样计算，总资金 / 杠杆倍数 / 分割系数，例如：
 
 ```python
+max_open_trades = 1
 max_entry_position_adjustment = 10
 max_dca_multiplier = 10
 leverage_num = 5
