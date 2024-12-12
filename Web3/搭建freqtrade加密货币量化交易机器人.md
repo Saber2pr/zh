@@ -2,8 +2,6 @@
 
 > 前提，你熟悉云服务器ssh连接终端的用法，和基础的python语法(有js基础也可)
 
-> 如需技术咨询或支持，可联系我～ 见本文末尾
-
 本文采用python量化机器人框架 freqtrade 开始操作！
 
 [freqtrade官方文档](https://www.freqtrade.io/en/stable/)
@@ -425,23 +423,9 @@ docker compose up -d
 
 启动，然后在 user_data/logs/freqtrade.log 文件里可以看到启动日志了。telegram机器人也会打印日志出来。
 
-### 有利润的策略
-
-这个网站列出了一些能够稳定盈利的策略，有兴趣可以点击下方链接前往获取代码
-
-[https://saber2pr.top/freqer/](https://saber2pr.top/freqer/)
-
 ### 回测
 
 最后说一下回测，freqtrade提供了回测功能，这个功能，我只能说它只能验证一下策略文件代码逻辑是否有bug，回测的收益结果和正常去实测跑差距还是比较明显的。建议先实际环境dry-run一段时间稳定了再开真实账户。
-
-### 联系我
-
-如需帮助，可在 telegram 上联系我
-
-[@recover2025](https://t.me/recover2025)
-
-或邮件 saber2pr@gmail.com
 
 ### 推荐阅读
 
