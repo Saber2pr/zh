@@ -91,9 +91,20 @@ class MyStrategy(IStrategy):
     # 定义交易对的时间框架
     timeframe = '5m'
 
-    # 定义策略的技术指标
-    def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        dataframe['ema_20'] = ta.EMA(dataframe, timeperiod=20)
+    # 将此代码添加到populate_indicators函数之前
+    @informative('1M')
+    def populate_indicators_1M(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        # 提供当前交易对的1分钟数据
+        return dataframe
+
+    @informative('1M', 'BTC/USDT:USDT', fmt='{column}_{base}_{timeframe}')
+    def populate_indicators_btc_1M(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        # 提供BTC/USDT的1分钟数据
+        return dataframe
+
+    @informative('1h', 'BTC/USDT:USDT', fmt='{column}_{base}_{timeframe}')
+    def populate_indicators_btc_1h(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        # 提供BTC/USDT的1小时数据
         return dataframe
 
     # 定义做多入场条件
