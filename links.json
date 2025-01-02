@@ -1,10 +1,4 @@
 {
-  "工具": [
-    {
-      "name": "在线简历制作",
-      "href": "https://saber2pr.top/vsc-profile-viewer/"
-    }
-  ],
   "代码": [
     {
       "name": "在线代码编辑",
@@ -15,10 +9,16 @@
       "href": "https://saber2pr.top/json-type-app/"
     }
   ],
-  "设计": [
+  "工具": [
     {
-      "name": "在线PS",
-      "href": "https://ps.gaoding.com/"
+      "name": "在线简历制作",
+      "href": "https://saber2pr.top/vsc-profile-viewer/"
+    }
+  ],
+  "产品": [
+    {
+      "name": "TodoList工具",
+      "href": "https://saber2pr.top/todolist-pro/"
     }
   ]
 }
