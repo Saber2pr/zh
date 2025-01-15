@@ -431,5 +431,4 @@ docker compose up -d
 
 如果你想要深入研究量化领域，读下这几篇文章吧：
 
-1. [freqtrade策略E0V1E支撑位解读](/zh/posts/3516500479/1259322740/)
-2. [Freqtrade如何正确DCA](/zh/posts/3516500479/1606919060/)
+1. [Freqtrade如何正确DCA](/zh/posts/3516500479/1606919060/)
