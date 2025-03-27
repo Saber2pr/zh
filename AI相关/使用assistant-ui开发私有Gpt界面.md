@@ -4,9 +4,37 @@
 
 ## 市面上的 Gpt UI 框架
 
+目前市面上对于私有部署 Gpt UI 的框架很多，例如 Dify、Fastgpt 等一键部署前后端的，缺点是太重，逻辑，定制起来比较麻烦。本文介绍一个轻量级的用于快速搭建 Gpt 聊天窗口界面的 UI 组件库 `assistant-ui`
+
 ## assistant-ui 理念
 
+assistant-ui 官网的介绍它是一个 Typescript 的 React 组件库。
+经过我几天的 demo 编写体验，感受是它将很多逻辑都封装为一个个模块化的 JSX 标签，例如输入框、编辑按钮、甚至将 IF 条件语句也给用户封装了 JSX 组件，这些组件内有数据流逻辑，每一个组件底层都有数据流操作耦合逻辑，所以它不是一个纯粹的 UI 组件库。
+这些 JSX 组件自带了 Tailwind 的样式风格，用这些组件搭建 UI 界面就像堆积木一样，需要什么 UI 模块，堆在一个页面中即可。
+同时它将 Gpt 的数据流逻辑进行了抽象，对外暴露了自定义接口，可以接入私有的三方 gpt api，可以兼容任何格式的 gpt 返回结构。
+
 ### 开发者无感知 Gpt 数据流
+
+gpt 返回的数据是流式的，需要将流式的数据片段式地填充到页面上展示，这部分逻辑 assistant-ui 已经内置封装在组件中，你只需要按格式返回给 assistant-ui 即可，
+
+如下所示：
+
+```ts
+const MyModelAdapter: ChatModelAdapter = {
+  async *run({ messages, abortSignal, context }) {
+    const stream = await backendApi({ messages, abortSignal, context });
+ 
+    let text = "";
+    for await (const part of stream) {
+      text += part.content
+ 
+      yield {
+        content: [{ type: "text", text }],
+      };
+    }
+  },
+};
+```
 
 ### 组件堆砌的开发方式
 
