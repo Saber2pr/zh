@@ -6,6 +6,15 @@
 
 目前市面上对于私有部署 Gpt UI 的框架很多，例如 Dify、Fastgpt 等一键部署前后端的，缺点是太重，逻辑，定制起来比较麻烦。本文介绍一个轻量级的用于快速搭建 Gpt 聊天窗口界面的 UI 组件库 `assistant-ui`
 
+本文介绍使用 assistant-ui 来搭建一个自定义的 GPT Web 界面，效果如下：
+
+![example1](https://raw.githubusercontent.com/Saber2pr/my-gpt-ui/main/assets/example1.png)
+![example2](https://raw.githubusercontent.com/Saber2pr/my-gpt-ui/main/assets/example2.png)
+
+接下来是演示环节～
+
+> 演示代码仓库地址见本文末尾，打开本地项目按照 README 完成启动预览～
+
 ## assistant-ui 理念
 
 assistant-ui 官网的介绍它是一个 Typescript 的 React 组件库。
@@ -466,29 +475,71 @@ const App = () => {
   )
 }
 ```
+`ThreadPrimitive.ScrollToBottom` 组件可实现点击后自动滚到底部。
 
-`ThreadPrimitive.ScrollToBottom` 组件可实现点击后自动滚到底部
+`Viewport` 组件底层的实现原理:
+
+```tsx
+const Viewport = ({ children }) => {
+  const divRef = useRef(null)
+
+  const scrollToBottom = (behavior: ScrollBehavior) => {
+    const div = divRef.current
+    if (!div) return
+    div.scrollTo({ top: div.scrollHeight, behavior })
+  }
+
+  const threadRuntime = useThreadRuntime()
+  useEffect(() => {
+    return threadRuntime.unstable_on('run-start', () => scrollToBottom('auto'))
+  }, [threadRuntime])
+
+  return <div ref={divRef}>{children} </div>
+}
+```
+
+监听到 run-start 时间后，通过调用 `scrollTo` 方法让消息窗口滚动到底部。
 
 5. 输入框
 
+消息列表下方就是用户输入内容的输入框，使用 `ComposerPrimitive.Input` 组件可渲染一个输入框：
+
 ```tsx
-import { Space } from 'antd'
 import { ComposerPrimitive } from '@assistant-ui/react'
 
 // 底部的输入框
 const Composer: FC = () => {
   return (
     <ComposerPrimitive.Root>
-      <Space>
-        <ComposerPrimitive.Input rows={1} autoFocus placeholder="Write a message..." />
-        <ComposerAction />
-      </Space>
+      <ComposerPrimitive.Input rows={1} autoFocus placeholder="给 GPT 发送消息" />
+      <ComposerAction />
     </ComposerPrimitive.Root>
   )
 }
 ```
 
+这里 `ComposerPrimitive.Root` 组件会监听 submit 事件，然后将输入内容通过 runtime 发送给 GPT 发起请求：
+
+```tsx
+import { useComposerRuntime } from '@assistant-ui/react'
+
+const ComposerPrimitiveRoot = ({ children }) => {
+  const composerRuntime = useComposerRuntime()
+  return (
+    <form
+      onSubmit={() => {
+        composerRuntime.send()
+      }}
+    >
+      {children}
+    </form>
+  )
+}
+```
+
 6. 发送和取消问答
+
+这里通过 IF 组件判断当前已经处于事件流中，会渲染停止按钮，未发起事件流请求时，渲染发送按钮：
 
 ```tsx
 import { ComposerPrimitive, ThreadPrimitive } from '@assistant-ui/react'
@@ -514,7 +565,12 @@ const ComposerAction: FC = () => {
 
 ### Gpt 接口接入
 
+整个应用的根结点需要提供一个 Provider，实现 Gpt 的适配器通过 Provider 注入，如下所示：
+
 ```tsx
+import { useLocalRuntime } from '@assistant-ui/react'
+import MyModelAdapterStream from './MyModelAdapterStream'
+
 export function MyRuntimeProvider({ children }: MyRuntimeProviderProps) {
   // 使用自定义的 ai 接口请求
   const runtime = useLocalRuntime(MyModelAdapterStream)
@@ -536,9 +592,11 @@ const MyApp = () => {
 }
 ```
 
+需要实现 MyModelAdapterStream 自定义 GPT 请求适配器
+
 #### 流式对接 gpt 响应数据流
 
-gpt 对话请求返回是 EventStream， assistant-ui 也提供了适配器支持流式接入消息数据
+gpt 对话请求返回是 EventStream， assistant-ui 也提供了适配器支持流式接入消息数据，类型为 ChatModelAdapter，如下所示：
 
 ```ts
 import { streamRequest } from '@/utils/streamRequest'
@@ -565,16 +623,17 @@ export const MyModelAdapterStream: ChatModelAdapter = {
 }
 ```
 
-streamRequest 流式处理：
+这里关键在于实现 streamRequest 流式请求方法，需要返回一个迭代器，当 GPT 数据流返回一个片段时，触发迭代器 next 一次，这里使用 yield 语法实现：
 
-需要持续的读取数据直到读取结束，简要示例如下：
+streamRequest 流式处理，需要持续的读取数据直到读取结束，简要示例如下：
 
 ```ts
 export async function* streamRequest(): AsyncGenerator<ChatModelRunResult> {
   const result = await fetch(url, options)
   const reader = result.body.getReader()
 
-   while (true) {
+  // 持续读取内容，直到读取结束。
+  while (true) {
       const { done, value } = await reader.read()
       if(done) {
         break
@@ -584,7 +643,9 @@ export async function* streamRequest(): AsyncGenerator<ChatModelRunResult> {
 }
 ```
 
-完整示例：
+在迭代器内部的 while (true) 语句是懒惰的，yield 使 while (true) 不会立即无限循环，yield 关键字会暂停生成器（generator）的执行，直到调用迭代器的 .next() 方法。这里不用担心 while (true) 的性能问题。
+
+这里还应该有 GPT 数据流片段的解析和状态，streamRequest 实现的完整示例：
 
 ```ts
 import { ChatModelRunResult } from '@assistant-ui/react'
@@ -646,8 +707,35 @@ export async function* streamRequest(
 }
 ```
 
+需要特别注意这里 catch 中需要调用一下 signal.throwIfAborted()，发生解析失败时要中断 EventStream 请求，如网络异常时。
 
-数据解析：
+EventStream 返回的数据片段格式是这样的：
+
+```txt
+event: init
+data: {"event": "init", "chat_id": "xxx", "message_id": "xxx", "app_id": "xxx", "workflow_id": "xxx"}
+
+event: flowNodeStatus
+data: {"event": "flowNodeStatus", "name": "LLM", "status": "running"}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "物", "reasoning_content": "", "tool_calls": []}}
+
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "（", "reasoning_content": "", "tool_calls": []}}
+
+event: done
+data: {"event": "done", "id": "fp_ded0d14823", "prompt_tokens": 15, "completion_tokens": 477, "total_tokens": 492}
+```
+
+每次片段响应是 event + data，例如：
+
+```txt
+event: answer
+data: {"event": "answer", "id": "fp_ded0d14823", "delta": {"role": "assistant", "content": "（", "reasoning_content": "", "tool_calls": []}}
+```
+
+这里需要实现解析方法，将片段解析为 json 对象，实现 parseStreamData 片段数据解析：
 
 ```ts
 export function parseStreamData(content: string) {
@@ -667,10 +755,6 @@ export function parseStreamData(content: string) {
         event = line.replace('event:', '').trim()
       }
 
-      if (line.startsWith('id:')) {
-        id = line.replace('id:', '').trim()
-      }
-
       if (line.startsWith('data:')) {
         try {
           data = JSON.parse(line.replace('data:', '').trim())
@@ -684,6 +768,12 @@ export function parseStreamData(content: string) {
   return result
 }
 ```
+
+### 最后
+
+以上就完成了一个简单的 assistant-ui 实现自定义 GPT 界面的示例。以上代码开源地址：
+
+[my-gpt-ui](https://github.com/Saber2pr/my-gpt-ui)
 
 ### 技术应用和前景
 
