@@ -312,7 +312,6 @@ const App = () => {
     </div>
   )
 }
-
 ```
 
 2.1 用户聊天消息展示
@@ -365,7 +364,7 @@ const Edit = ({ children }) => {
 
 2.2 分支选择
 
-使用 BranchPickerPrimitive 组件可切换不同的问句和答句
+使用 BranchPickerPrimitive 组件可切换不同的问句和答句，其中 `Previous` 组件点击后切换到前一个分支，`Next` 组件点击后切换到后一个分支，`Number` 和 `Count` 渲染当前分支的序号和分支总数。
 
 ```tsx
 import { BranchPickerPrimitive } from '@assistant-ui/react'
@@ -389,9 +388,28 @@ const BranchPicker = ({ className }) => {
 }
 ```
 
+这里的 `Root` 组件渲染为一个 `div`，同时会通过 Hook Api 注入属性，会有一些额外属性选项例如 `hideWhenSingleBranch` 控制是否渲染内容。
+
 2.3 AI 回复消息展示
 
 AI回复展示消息的组件和用户消息组件相同，只是在 `ThreadPrimitive.Messages` 中设置到 `AssistantMessage` 即可
+
+```tsx
+import { ThreadPrimitive } from '@assistant-ui/react'
+
+const App = () => {
+  return (
+    <ThreadPrimitive.Messages
+      components={{
+        UserMessage: UserMessage,
+        AssistantMessage: AssistantMessage,
+      }}
+    />
+  )
+}
+```
+
+`UserMessage` 和 `AssistantMessage` 的实现一样，只是设置到 `components` 时会有不同的上下文 context，会渲染对应的消息内容。
 
 3. 条件语句
 
@@ -408,6 +426,15 @@ import { ThreadPrimitive } from '@assistant-ui/react'
     message="我是AI，可以回答你的问题，请在下方输入框输入你的需求～"
   />
 </ThreadPrimitive.If>
+```
+
+除了 `empty` 是否为空消息的判断，还有以下条件渲染属性：
+
+```tsx
+<ThreadPrimitive.If user>用户内容时展示</ThreadPrimitive.If>
+<ThreadPrimitive.If assistant>AI内容时显示</ThreadPrimitive.If>
+<ThreadPrimitive.If hasBranches>有分支时展示</ThreadPrimitive.If>
+<ThreadPrimitive.If speaking>阅读时展示</ThreadPrimitive.If>
 ```
 
 4. 滚动容器
