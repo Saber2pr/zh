@@ -17,12 +17,12 @@ assistant-ui 官网的介绍它是一个 Typescript 的 React 组件库。
 
 gpt 返回的数据是流式的，需要将流式的数据片段式地填充到页面上展示，这部分逻辑 assistant-ui 已经内置封装在组件中，你只需要按格式返回给 assistant-ui 即可，
 
-如下所示：
+如下所示，实现模型适配器：
 
 ```ts
 const MyModelAdapter: ChatModelAdapter = {
   async *run({ messages, abortSignal, context }) {
-    const stream = await backendApi({ messages, abortSignal, context });
+    const stream = await streamRequest({ messages, abortSignal, context });
  
     let text = "";
     for await (const part of stream) {
@@ -36,11 +36,65 @@ const MyModelAdapter: ChatModelAdapter = {
 };
 ```
 
+也可以直接实现为：
+
+```ts
+const MyModelAdapter: ChatModelAdapter = {
+  async *run({ messages, abortSignal, context }) {
+    const stream = await streamRequest({ messages, abortSignal, context });
+    yield* stream
+  },
+};
+```
+
+当然 `streamRequest` 也需要定义为 Generator 生成器函数，返回复合要求的数据结构，例如实现 GPT 流式请求：
+
+```ts
+export async function* streamRequest(): AsyncGenerator<ChatModelRunResult> {
+  const result = await fetch(url, options)
+  const reader = result.body.getReader()
+
+   while (true) {
+      const { done, value } = await reader.read()
+      if(done) {
+        break
+      }
+      yield { status: 'running', content: value }
+   }
+}
+```
+
 ### 组件堆砌的开发方式
+
+assistant-ui 提供了和逻辑层耦合的 UI 组件，所以几乎无需编写逻辑，只需要页面添加对应组件即可，例如：
+
+```tsx
+const MyGptUI = () => {
+  return (
+    <MyRuntimeProvider>
+      <ThreadListPrimitive.New />  {/* 新建对话 */}
+      <ThreadListPrimitive.Items />  {/* 对话列表 */}
+      <ThreadPrimitive.Viewport>  {/* 对话消息窗口 */}
+        <ThreadPrimitive.Suggestion
+          prompt="如何用 Typescript 实现 Helloworld？"
+          method="replace"
+          autoSend
+        /> {/* 预设推荐问句 */}
+        <ThreadPrimitive.Messages /> {/* 消息列表 */}
+        <ThreadPrimitive.ScrollToBottom /> {/* 滚到窗口底部按钮 */}
+        <ComposerPrimitive.Input /> {/* 输入框 */}
+        <ComposerPrimitive.Send /> {/* 发送按钮 */}
+      </ThreadPrimitive.Viewport>
+    </MyRuntimeProvider>
+  )
+}
+```
+
+这些例如 `New` 、`Messages`、`Send` 组件内部都有数据流监听和处理逻辑，不是纯的 UI 视图组件。
 
 ## assistant-ui 的基础组件
 
-
+在私有定制化需求中，我们通常需要调整 UI 界面的样式、布局，下面将介绍各个组件的使用方法。
 
 ### 聊天线程列表
 
