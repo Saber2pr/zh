@@ -22,6 +22,21 @@ assistant-ui 官网的介绍它是一个 Typescript 的 React 组件库。
 这些 JSX 组件自带了 Tailwind 的样式风格，用这些组件搭建 UI 界面就像堆积木一样，需要什么 UI 模块，堆在一个页面中即可。
 同时它将 Gpt 的数据流逻辑进行了抽象，对外暴露了自定义接口，可以接入私有的三方 gpt api，可以兼容任何格式的 gpt 返回结构。
 
+```tsx
+import { useLocalRuntime, AssistantRuntimeProvider, ThreadPrimitive } from '@assistant-ui/react'
+
+const App = () => {
+  return (
+    <AssistantRuntimeProvider runtime={自定义实现 GPT 适配器}>
+      <ThreadPrimitive.If empty={true}>暂无消息，您可输入尝试和 GPT 对话～</ThreadPrimitive.If>
+      <Messages>
+      <Input placeholder="输入内容～">
+      <Send>发送</Send>
+    </AssistantRuntimeProvider>
+  )
+}
+```
+
 ### 开发者无感知 Gpt 数据流
 
 gpt 返回的数据是流式的，需要将流式的数据片段式地填充到页面上展示，这部分逻辑 assistant-ui 已经内置封装在组件中，你只需要按格式返回给 assistant-ui 即可，
