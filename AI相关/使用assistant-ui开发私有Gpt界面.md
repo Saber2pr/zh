@@ -540,7 +540,24 @@ export const MyModelAdapterStream: ChatModelAdapter = {
 
 streamRequest 流式处理：
 
-需要持续的读取数据直到读取结束，
+需要持续的读取数据直到读取结束，简要示例如下：
+
+```ts
+export async function* streamRequest(): AsyncGenerator<ChatModelRunResult> {
+  const result = await fetch(url, options)
+  const reader = result.body.getReader()
+
+   while (true) {
+      const { done, value } = await reader.read()
+      if(done) {
+        break
+      }
+      yield { status: 'running', content: value }
+   }
+}
+```
+
+完整示例：
 
 ```ts
 import { ChatModelRunResult } from '@assistant-ui/react'
