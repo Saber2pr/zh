@@ -512,44 +512,22 @@ const MyApp = () => {
 #### 流式对接 gpt 响应数据流
 
 ```ts
-import { EVENT_THREAD_SET_TITLE } from '@/constants'
-import { Dispatcher } from '@/utils/event'
 import { streamRequest } from '@/utils/streamRequest'
 import { ChatModelAdapter } from '@assistant-ui/react'
 
 export const MyModelAdapterStream: ChatModelAdapter = {
   async *run({ messages, abortSignal }) {
-    let inputText = ''
-
     // messages 保存了当前对话的上下文，messages[messages.length - 1] 就是最后一次即当前询问的内容
-    const lastItem = messages[messages.length - 1]
-    const inputItem = lastItem.content[0]
-    if (inputItem.type === 'text') {
-      inputText = inputItem.text
-    }
-    const stream = streamRequest(
-      process.env.GPT_API_FRONTEND + '/openapi/v1/app/completions',
-      {
+    let inputText = messages[messages.length - 1].content[0].text
+
+    const stream = streamRequest('/openapi/v1/app/completions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${process.env.GPT_TOKEN}`,
+          Authorization: `Bearer ${GPT_TOKEN}`,
         },
-        // 处理参数
-        body: JSON.stringify({
-          query: inputText,
-          stream: true,
-        }),
-        // 点击取消发送时取消问答
-        signal: abortSignal,
-        onChange(type, data) {
-          if (type === 'complete') {
-            Dispatcher.instance.dispatch(EVENT_THREAD_SET_TITLE, {
-              id: lastItem.id,
-              data: data.slice(0, 20),
-            })
-          }
-        },
+        body: JSON.stringify({ query: inputText, stream: true }), // 处理参数
+        signal: abortSignal, // 点击取消发送时取消问答
       },
     )
 
@@ -562,14 +540,11 @@ streamRequest 流式处理：
 
 ```ts
 import { ChatModelRunResult } from '@assistant-ui/react'
-
 import { parseStreamData } from './parseStreamData'
 
 export async function* streamRequest(
   url: string,
-  options: RequestInit & {
-    onChange?(type: 'complete' | 'running' | 'incomplete', data: string): void
-  },
+  options: RequestInit,
 ): AsyncGenerator<ChatModelRunResult> {
   const result = await fetch(url, options)
   const reader = result.body.getReader()
@@ -583,18 +558,9 @@ export async function* streamRequest(
       const { done, value } = await reader.read()
       // 流读取完成
       if (done) {
-        options.onChange && options.onChange('complete', currentContent)
         yield {
-          status: {
-            type: 'complete',
-            reason: 'stop',
-          },
-          content: [
-            {
-              text: currentContent,
-              type: 'text',
-            },
-          ],
+          status: { type: 'complete', reason: 'stop' },
+          content: [ { text: currentContent, type: 'text' } ]
         }
         break
       }
@@ -610,38 +576,20 @@ export async function* streamRequest(
           currentContent += content || ''
           reasonContent += reasoning_content || ''
 
-          options.onChange && options.onChange('running', currentContent)
           yield {
-            status: {
-              type: 'running',
-            },
-            content: [
-              {
-                text: currentContent,
-                type: 'text',
-              },
-            ],
+            status: { type: 'running' },
+            content: [{ text: currentContent, type: 'text' }],
           }
         }
       }
       chunks = ''
     } catch (error) {
       // 点击了取消
-      console.error('Stream reading error:', error)
       if (error?.name === 'AbortError') {
         options.signal && options.signal.throwIfAborted()
-        options.onChange && options.onChange('incomplete', reasonContent)
         yield {
-          status: {
-            type: 'incomplete',
-            reason: 'error',
-          },
-          content: [
-            {
-              text: reasonContent,
-              type: 'reasoning',
-            },
-          ],
+          status: { type: 'incomplete', reason: 'error' },
+          content: [ { text: reasonContent, type: 'reasoning' } ],
         }
         break
       }
@@ -686,28 +634,6 @@ export function parseStreamData(content: string) {
   }
 
   return result
-}
-```
-
-#### 动态设置聊天线程标题
-
-```tsx
-// 点击切换聊天
-const ThreadListItemTitle: FC = () => {
-  const runtime = useThreadListItemRuntime()
-  useEffect(() => {
-    const handle = (event: { id: string; data: string }) => {
-      const state = runtime.getState()
-      if (state.isMain) {
-        runtime.rename(event.data)
-      }
-    }
-    Dispatcher.instance.addEventListener(EVENT_THREAD_SET_TITLE, handle)
-    return () => {
-      Dispatcher.instance.removeEventListener(EVENT_THREAD_SET_TITLE, handle)
-    }
-  }, [runtime])
-  return <ThreadListItemPrimitive.Title fallback={<div>新对话</div>} />
 }
 ```
 
