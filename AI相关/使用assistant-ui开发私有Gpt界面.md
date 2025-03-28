@@ -8,8 +8,8 @@
 
 本文介绍使用 assistant-ui 来搭建一个自定义的 GPT Web 界面，效果如下：
 
-![example1](https://raw.githubusercontent.com/Saber2pr/my-gpt-ui/main/assets/example1.png)
-![example2](https://raw.githubusercontent.com/Saber2pr/my-gpt-ui/main/assets/example2.png)
+![example1](https://raw.githubusercontent.com/Saber2pr/my-gpt-ui/main/assets/example1.webp)
+![example2](https://raw.githubusercontent.com/Saber2pr/my-gpt-ui/main/assets/example2.webp)
 
 接下来是演示环节～
 
@@ -92,7 +92,7 @@ export async function* streamRequest(): AsyncGenerator<ChatModelRunResult> {
 
 assistant-ui 提供了和逻辑层耦合的 UI 组件，所以几乎无需编写逻辑，只需要页面添加对应组件即可，例如：
 
-![example3](https://raw.githubusercontent.com/Saber2pr/my-gpt-ui/main/assets/example3.png)
+![example3](https://raw.githubusercontent.com/Saber2pr/my-gpt-ui/main/assets/example3.webp)
 
 ```tsx
 const MyGptUI = () => {
@@ -126,7 +126,7 @@ const MyGptUI = () => {
 
 gpt 界面上通常左侧为不同主题/上下文的聊天列表，通俗来讲就是左侧是聊天室列表，每个聊天室保存了 gpt 对话的上下文，在 `assistant-ui` 框架中称为聊天线程。
 
-![ThreadList](https://raw.githubusercontent.com/Saber2pr/my-gpt-ui/main/assets/ThreadList.png)
+![ThreadList](https://raw.githubusercontent.com/Saber2pr/my-gpt-ui/main/assets/ThreadList.webp)
 
 1. 新建聊天线程
 
@@ -261,7 +261,7 @@ const useThreadListItemHook = () => {
 
 ### 聊天线程
 
-![Thread](https://raw.githubusercontent.com/Saber2pr/my-gpt-ui/main/assets/Thread.png)
+![Thread](https://raw.githubusercontent.com/Saber2pr/my-gpt-ui/main/assets/Thread.webp)
 
 1. 预设问答
 
