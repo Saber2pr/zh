@@ -511,6 +511,8 @@ const MyApp = () => {
 
 #### 流式对接 gpt 响应数据流
 
+gpt 对话请求返回是 EventStream， assistant-ui 也提供了适配器支持流式接入消息数据
+
 ```ts
 import { streamRequest } from '@/utils/streamRequest'
 import { ChatModelAdapter } from '@assistant-ui/react'
@@ -537,6 +539,8 @@ export const MyModelAdapterStream: ChatModelAdapter = {
 ```
 
 streamRequest 流式处理：
+
+需要持续的读取数据直到读取结束，
 
 ```ts
 import { ChatModelRunResult } from '@assistant-ui/react'
