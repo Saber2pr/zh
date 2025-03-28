@@ -619,6 +619,8 @@ const MyApp = () => {
 
 gpt 对话请求返回是 EventStream， assistant-ui 也提供了适配器支持流式接入消息数据，类型为 ChatModelAdapter，如下所示：
 
+![EventStream](https://raw.githubusercontent.com/Saber2pr/my-gpt-ui/main/assets/EventStream.webp)
+
 ```ts
 import { streamRequest } from '@/utils/streamRequest'
 import { ChatModelAdapter } from '@assistant-ui/react'
