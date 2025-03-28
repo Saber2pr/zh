@@ -30,7 +30,7 @@ const App = () => {
     <AssistantRuntimeProvider runtime={自定义实现 GPT 适配器}>
       <ThreadPrimitive.If empty={true}>暂无消息，您可输入尝试和 GPT 对话～</ThreadPrimitive.If>
       <Messages>
-      <Input placeholder="输入内容～">
+      <Composer placeholder="输入内容～">
       <Send>发送</Send>
     </AssistantRuntimeProvider>
   )
@@ -117,6 +117,10 @@ const MyGptUI = () => {
 ```
 
 这些例如 `New` 、`Messages`、`Send` 组件内部都有数据流监听和处理逻辑，不是纯的 UI 视图组件。
+
+组件整体流程图：
+
+![assi-ui](https://raw.githubusercontent.com/Saber2pr/my-gpt-ui/main/assets/assi-ui.drawio.svg)
 
 ## assistant-ui 的基础组件
 
