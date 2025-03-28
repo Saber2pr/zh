@@ -92,6 +92,8 @@ export async function* streamRequest(): AsyncGenerator<ChatModelRunResult> {
 
 assistant-ui 提供了和逻辑层耦合的 UI 组件，所以几乎无需编写逻辑，只需要页面添加对应组件即可，例如：
 
+![example3](https://raw.githubusercontent.com/Saber2pr/my-gpt-ui/main/assets/example3.png)
+
 ```tsx
 const MyGptUI = () => {
   return (
@@ -123,6 +125,8 @@ const MyGptUI = () => {
 ### 聊天线程列表
 
 gpt 界面上通常左侧为不同主题/上下文的聊天列表，通俗来讲就是左侧是聊天室列表，每个聊天室保存了 gpt 对话的上下文，在 `assistant-ui` 框架中称为聊天线程。
+
+![ThreadList](https://raw.githubusercontent.com/Saber2pr/my-gpt-ui/main/assets/ThreadList.png)
 
 1. 新建聊天线程
 
@@ -256,6 +260,8 @@ const useThreadListItemHook = () => {
 ```
 
 ### 聊天线程
+
+![Thread](https://raw.githubusercontent.com/Saber2pr/my-gpt-ui/main/assets/Thread.png)
 
 1. 预设问答
 
