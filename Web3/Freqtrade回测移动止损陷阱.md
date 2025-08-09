@@ -22,3 +22,7 @@ def custom_exit(self, pair: str, trade: Trade, current_time: datetime, current_r
 在这个例子中，只有当最大利润超过10%且当前利润与最大利润的差距小于2%时，才会触发 `custom_trailing_stop` 退出策略，从而避免在没有足够利润的情况下过早止损。
 ### 结论 
 总的来说，使用 **trailing_stop**  进行止损可能因为回测的时间线不够细致，导致其效果低于预期。为了更准确地反映市场的动态变化，建议通过 **custom_exit**  来实现更灵活的止损策略，从而避免因过度依赖回测机制带来的潜在陷阱。
+
+### 宝贝推广
+
+【量化策略37套附6套正向回测结果】 https://m.tb.cn/h.hqpATDP?tk=TRtH471WgWF

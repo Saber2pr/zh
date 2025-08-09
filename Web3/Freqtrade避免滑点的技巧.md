@@ -92,3 +92,7 @@ def adjust_slippage_threshold(self, market_volatility: float) -> float:
 - **延迟执行** ：通过延迟执行来减少市场波动影响。
 
 通过这些技巧，我们可以在Freqtrade中更好地控制滑点问题，从而提高策略的执行效率和稳定性。
+
+### 宝贝推广
+
+【量化策略37套附6套正向回测结果】 https://m.tb.cn/h.hqpATDP?tk=TRtH471WgWF
