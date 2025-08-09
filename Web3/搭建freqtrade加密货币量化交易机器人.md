@@ -2,6 +2,8 @@
 
 > 前提，你熟悉云服务器ssh连接终端的用法，和基础的python语法(有js基础也可)
 
+> 文章末尾有宝贝推广哦，如果你已进阶不妨拉到底部看看～
+
 本文采用python量化机器人框架 freqtrade 开始操作！
 
 [freqtrade官方文档](https://www.freqtrade.io/en/stable/)
@@ -432,3 +434,7 @@ docker compose up -d
 如果你想要深入研究量化领域，读下这几篇文章吧：
 
 1. [Freqtrade如何正确DCA](/zh/posts/3516500479/1606919060/)
+
+### 宝贝推广
+
+【量化策略37套附6套正向回测结果】 https://m.tb.cn/h.hqpATDP?tk=TRtH471WgWF
