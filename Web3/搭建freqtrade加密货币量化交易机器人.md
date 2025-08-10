@@ -2,8 +2,6 @@
 
 > 前提，你熟悉云服务器ssh连接终端的用法，和基础的python语法(有js基础也可)
 
-> 文章末尾有宝贝推广哦，如果你已进阶不妨拉到底部看看～
-
 本文采用python量化机器人框架 freqtrade 开始操作！
 
 [freqtrade官方文档](https://www.freqtrade.io/en/stable/)
