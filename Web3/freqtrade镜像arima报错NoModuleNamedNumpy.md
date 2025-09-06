@@ -13,7 +13,3 @@ FROM freqtradeorg/freqtrade:2025.5
 
 RUN pip install pmdarima
 ```
-
-### 宝贝推广
-
-【量化策略37套附6套正向回测结果】 https://m.tb.cn/h.hqpATDP?tk=TRtH471WgWF

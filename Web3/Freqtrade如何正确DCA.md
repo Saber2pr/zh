@@ -118,7 +118,3 @@ def adjust_trade_position(self, trade: Trade, current_time: datetime,
 
 ### 小结 
 `freqtrade` 提供了强大的配置选项来实现 DCA 策略，使交易者能够在波动的市场中通过加仓技巧降低投资风险。通过启用 **仓位调整** （`position adjustment`）功能并设置合理的资金分配比例，您可以实现灵活的资金管理，确保在市场下跌时有效地平摊成本，提高投资回报。如果您希望在 `freqtrade` 中实践 DCA 策略，只需调整相关参数并配合适合的交易策略，就能最大化利用这一技巧来提升您的交易表现。
-
-### 宝贝推广
-
-【量化策略37套附6套正向回测结果】 https://m.tb.cn/h.hqpATDP?tk=TRtH471WgWF

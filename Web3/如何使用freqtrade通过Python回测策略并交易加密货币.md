@@ -500,7 +500,3 @@ fast_MA当交叉至下方时买入slow_MA。
 fast_MA当交叉于上方时卖出slow_MA。
 
 要了解您还可以做什么plot-dataframe，请运行 docker-compose run --rm freqtrade plot-dataframe -h 或访问相关文档。
-
-### 宝贝推广
-
-【量化策略37套附6套正向回测结果】 https://m.tb.cn/h.hqpATDP?tk=TRtH471WgWF

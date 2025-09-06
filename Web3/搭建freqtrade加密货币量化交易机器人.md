@@ -432,7 +432,3 @@ docker compose up -d
 如果你想要深入研究量化领域，读下这几篇文章吧：
 
 1. [Freqtrade如何正确DCA](/zh/posts/3516500479/1606919060/)
-
-### 宝贝推广
-
-【量化策略37套附6套正向回测结果】 https://m.tb.cn/h.hqpATDP?tk=TRtH471WgWF
