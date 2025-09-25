@@ -1,4 +1,4 @@
-![https://saber2pr.top/MyWeb/resource/image/agent.drawio.svg](https://saber2pr.top/MyWeb/resource/image/agent-v2.drawio.svg)
+![https://saber2pr.top/MyWeb/resource/image/agent-v2.drawio.svg](https://saber2pr.top/MyWeb/resource/image/agent-v2.drawio.svg)
 
 相关技术：
 1. RAG：qdrant，@qdrant/js-client-rest
