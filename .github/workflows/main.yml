@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4.1.1
         with:
-            fetch-depth: 0   # 拉取完整历史
+          fetch-depth: 0 # 拉取完整历史
       - uses: Saber2pr/wiki-builder@v0.0.89
         with:
           cname: saber2pr.top
