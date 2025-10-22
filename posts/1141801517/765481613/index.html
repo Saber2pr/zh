@@ -1,0 +1,1451 @@
+<!doctype html><html lang="en"><head>
+      <link rel="icon" href="//saber2pr.top/MyWeb/resource/image/saber2pr-top.ico" type="image/x-icon" />
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3641373095149503" crossorigin="anonymous"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CLMYWGQBH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'G-6CLMYWGQBH');
+      </script>
+    <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    @keyframes skeleton-loading {
+      0% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0 50%;
+      }
+    }
+
+    .skeleton-loading-list {
+      margin: 3rem 1rem 10rem;
+    }
+
+    .skeleton-loading-item {
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.06) 25%, rgba(0, 0, 0, 0.15) 37%, rgba(0, 0, 0, 0.06) 63%);
+      background-size: 400% 100%;
+      animation-name: skeleton-loading;
+      animation-duration: 1.4s;
+      animation-timing-function: ease;
+      animation-iteration-count: infinite;
+      height: 16px;
+      margin-top: 16px;
+    }
+    </style>
+
+    <style>
+      .ssr-a {
+        color: #6d6d6d;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .ssr-a:hover {
+        color: black;
+      }
+
+      .ssr-a-active {
+        color: black;
+        font-weight: 700;
+        border-left: 0.25rem solid #61dafb;
+        padding-left: 10px;
+      }
+
+      .ssr-li {
+        line-height: 2rem;
+      }
+
+      .ssr-ul {
+        list-style: none;
+        padding-left: 16px;
+        margin: 4px;
+      }
+
+      .ssr-dir {
+        color: #6d6d6d;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .ssr-dir-active {
+        color: #1a1a1a;
+      }
+
+      .ssr-div-name:hover {
+        outline: -webkit-focus-ring-color auto 1px;
+        color: #1a1a1a;
+      }
+
+      .ssr-topheader {
+        width: 100%;
+        height: 40px;
+        background-color: #20232a;
+        position: fixed;
+        left:0;
+        top:0;
+      }
+      .ssr-topheader-a {
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        display: inline-block;
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+        color: #d5d5d7;
+        border-bottom: none;
+        line-height: 40px;
+      }
+
+      .ssr-content-title {
+        word-break: break-all;
+        font-size: 3rem;
+        margin-top: calc(3rem + 40px);
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+
+      .ssr-wiki {
+        margin: 0 4.5rem;
+        display: flex;
+      }
+
+      .ssr-wiki-content {
+        width:70%;
+      }
+
+      .ssr-wiki-menu {
+        width: 30%;
+        background-color: #f7f7f7;
+        border-left: 1px solid #ececec;
+        height: calc(100vh - 40px);
+        position: fixed;
+        right:-1rem;
+        top:40px;
+        overflow-y:auto;
+      }
+
+      .ssr-content-main {
+        margin: 1rem;
+        padding: 1rem;
+      }
+
+      #root-pre {
+        width: 100vw;
+        height: 100vh;
+        overflow: auto;
+        position: fixed;
+        left:0;
+        top:0;
+        z-index:999;
+      }
+      #root {
+        position: relative;
+        z-index:0;
+      }
+
+      @media screen and (max-width: 740px) {
+        .ssr-topheader {
+          height: 2rem;
+        }
+        .ssr-topheader-a {
+          line-height: 2rem;
+        }
+        .ssr-wiki {
+          flex-direction: column;
+          margin: 0;
+          padding: 0;
+        }
+
+        .ssr-wiki-content {
+          width: 100%;
+        }
+
+        .ssr-wiki-menu {
+          position: relative;
+          width: 100%;
+          right: 0;
+        }
+
+        .ssr-content-title {
+          font-size: 2rem;
+          margin-top: 4rem;
+          margin-left: 0.5rem;
+          margin-right: 0.5rem;
+        }
+
+        .ssr-content-main {
+          margin: 0.5rem;
+          padding: 0.5rem;
+          line-height: 1.5rem;
+          font-size: 14px;
+        }
+      }
+    </style>
+    <script>
+    window.__title = "KMP算法"
+    window.__backgroundImage = ""
+    window.__basename = '/zh'
+    window.__buttomlinksUri = 'https://saber2pr.top/zh/links.json?ts=1301'
+    window.__expandAllMenu = ''
+    window.__adsSlotHtml = '%3Cins%20class%3D%22adsbygoogle%22%20style%3D%22display%3Ablock%3B%20text-align%3Acenter%3B%22%20data-ad-layout%3D%22in-article%22%20data-ad-format%3D%22fluid%22%20data-ad-client%3D%22ca-pub-3641373095149503%22%20data-ad-slot%3D%225932086556%22%3E%3C%2Fins%3E'
+    window.__i18nConfig = [{"name":"Chinese","key":"/zh"},{"name":"English","key":"/"}]
+    window.__expandDirs = ["/blog/数据结构算法"]
+    window.__wiki = `
+Html2canvas
+  浏览器打印dom节点:4184327779/1400959724
+  ios兼容:4184327779/2277086981
+MacOS相关
+  DS_Store文件:32822141/3167946729
+  查看CPU架构:32822141/1216714181
+  清理磁盘占用:32822141/2670574645
+  启用任何来源:32822141/2264140028
+Haskell基础
+  Haskell与JS:1500898427/2723069493
+  搭建haskell环境:1500898427/719576122
+  函数式编程基本概念:1500898427/4065193100
+  函数式设计:1500898427/517802640
+Github-API
+  RestFul-v3:3519632019/495205379
+  使用Action自动化发布Docker镜像:3519632019/740280299
+  使用Action自动化发布Pages:3519632019/298709816
+  使用github-issue api做评论系统:3519632019/2320422255
+  github鉴权:3519632019/4003128456
+  使用github-action发布npm包:3519632019/4135730446
+AI相关
+  使用assistant-ui开发私有Gpt界面:2674059917/846645548
+  AIAgent架构:2674059917/329311398
+React原理
+  事件冒泡与Portals:93045664/2799513546
+  ref转发:93045664/3388403223
+  batchUpdate:93045664/941840309
+  reconciler实现
+    hook
+      useRef:93045664/1983513371/2757247829/2344878510
+      useMemo:93045664/1983513371/2757247829/3580118952
+      useState:93045664/1983513371/2757247829/2690326048
+      createContext:93045664/1983513371/2757247829/3998410199
+      useEffect:93045664/1983513371/2757247829/2808238690
+    performWork:93045664/1983513371/3795080668
+    commitWork:93045664/1983513371/178127104
+    workLoop:93045664/1983513371/912850102
+    performUnitOfWork:93045664/1983513371/1752134054
+    全局变量:93045664/1983513371/1460438571
+    updateHostProperties:93045664/1983513371/2630219977
+    createElement:93045664/1983513371/1297038992
+    beginWork:93045664/1983513371/2571628068
+    commitAllWork:93045664/1983513371/2461584387
+    render:93045664/1983513371/2489096554
+    reconcileChildren:93045664/1983513371/3554215910
+  React中的错误处理:93045664/1616101240
+  context_rerender方案代替redux:93045664/1879904057
+  React函数式编程:93045664/2815536621
+  propTypes验证:93045664/416731394
+  服务端渲染SSR原理:93045664/2468248631
+  数据结构类型
+    关于TSX的类型定义:93045664/2486782765/794117400
+    Fiber数据结构:93045664/2486782765/2475351125
+  生命周期:93045664/4270092731
+  如何找到alternate:93045664/3007037269
+  keep-live方法:93045664/2911903262
+  Context造成的rerender:93045664/180055368
+  react-key与defaultValue:93045664/2073903539
+  React性能优化:93045664/3803735211
+  ref为什么能保持引用:93045664/3986822953
+  组件通信:93045664/1162395221
+  React底层XSS防御:93045664/358186174
+  useState使用props初始化的注意点:93045664/2832757990
+  遍历Fiber链表:93045664/1871825397
+  useEffect的deps规则:93045664/1346301198
+  React函数组件对比class组件:93045664/2664435509
+  React-Fiber实现:93045664/2011034187
+Linux相关
+  双系统重装后恢复ubuntu引导:4216687053/3246035575
+  安装最新nodejs:4216687053/1157872960
+  shell命令:4216687053/776465468
+  ssh连接服务器:4216687053/3760199443
+  tty终端:4216687053/4179631472
+  开放端口:4216687053/3481848118
+  设置全局http代理:4216687053/1372394815
+  ubuntu维护:4216687053/2666601390
+浏览器API
+  navigator对象:2844996852/1902495278
+  requestAnimationFrame:2844996852/1362490476
+  requestIdleCallback方法:2844996852/1499246381
+  移动端获取clientXY:2844996852/104107200
+  pageX,pageY,offsetX,offsetY,clientX,clientY,x,y,screenX,screenY区别:2844996852/860483624
+  MutationObserver:2844996852/1632717425
+  DOM对象继承体系:2844996852/2397984433
+  documentElement:2844996852/3383505216
+  offset、client、scroll区别:2844996852/2913683787
+  clientHeight与scrollHeight区别:2844996852/2662535883
+Saber2pr's Blog:1412107753
+Git版本控制
+  日报生成:3398605015/2579148434
+  github与git:3398605015/3794619412
+  rebase:3398605015/1191892009
+  使用密码连接github:3398605015/4154284617
+  git清除登录状态:3398605015/1200456604
+  Git提交报错RPCfailed-HTTP2:3398605015/2867143539
+  checkout:3398605015/2939694414
+  检查最近1次提交变更内容:3398605015/2463490981
+  设置用户名:3398605015/3733931656
+  fork之后更新upstream:3398605015/1060207107
+  浅克隆:3398605015/3347896858
+  branch:3398605015/3146128159
+  pull自动合并使用本地版本:3398605015/119733108
+  log:3398605015/2403297477
+  克隆git仓库中的文件夹或路径:3398605015/3387022561
+  撤销上一次提交:3398605015/4101871859
+其他常用命令
+  win常用命令:1004006279/2281759021
+  cad基础命令:1004006279/3577021338
+wordpress
+  数据库连接问题:678694731/2112205065
+练习
+  来测试一下？:1866621996/2547811729
+博客建设日志
+  网站重构、优化日志:3847924491/657262907
+  网站架构和技术栈:3847924491/4078533301
+  PrivacyPolicy:3847924491/886977854
+  博客前台的更新程序发布！:3847924491/2814565062
+  网站建设过程:3847924491/2629084021
+VSCode插件开发
+  vscode插件编写教程:2964907711/3615466745
+  实现一个WebIDE实时编译React:2964907711/3727446140
+  vscode插件路径相关:2964907711/625161080
+  使用默认浏览器打开链接:2964907711/3947403448
+  Iceworks篇
+    iceworks-i18n多语言原理:2964907711/379706623/1371130024
+    iceworks-project-creator实现原理简介:2964907711/379706623/2320633717
+    iceworks-app实现原理简介:2964907711/379706623/526561764
+Ant-Design组件
+  图片上传:3208342803/2176036764
+  Menu组件样式选择器:3208342803/694290787
+  Modal中form-reset无效:3208342803/1222161386
+  table前端分页与后端分页:3208342803/467124131
+  AntDesignTable固定列fixed无效？你可能忘了这一点！:3208342803/1635262921
+  学习antd组件设计:3208342803/1140962328
+  TableTransfer:3208342803/2085038609
+  form表单验证:3208342803/2869683577
+  异步初始化表单项:3208342803/2419708328
+  antd中的一些坑的细节(持续更新):3208342803/3236632651
+  右键菜单:3208342803/2678461770
+  antd按需加载:3208342803/4232543487
+  排序表格:3208342803/2337096581
+  form中使用checkbox:3208342803/3546697912
+  重置Modal样式:3208342803/2937019030
+  Modal遮罩双层滚动问题:3208342803/228891917
+  input样式重置:3208342803/2230159762
+正则表达式
+  基础语法:794273428/2650614757
+  常用正则:794273428/2424771335
+  理解正则表达式及常用正则表达式整理:794273428/3263493545
+  学习技巧:794273428/1183386531
+  combineReplacers:794273428/2142416038
+数据库
+  mysql
+    在512MB服务上运行mysql8:350907895/2501908538/748097271
+    常用命令:350907895/2501908538/1875203988
+    使用docker安装mysql:350907895/2501908538/2369105520
+  mongodb
+    Nodejs操作mongodb:350907895/4026166152/3335538363
+    添加数据库管理员:350907895/4026166152/1726056664
+    mongodb增删査改:350907895/4026166152/3462181640
+基础设施建设
+  使用gitlab和drone实现自动化部署:1756609922/1252730815
+Nextjs服务端渲染
+  利用Link实现Tab的问题与优化:508410872/1788703944
+  Nextjs首屏渲染速度优化:508410872/3354489317
+  ssr项目架构注意与优化:508410872/3624492405
+  非api反向代理:508410872/909006418
+  Nextjs自动静态优化存在的问题:508410872/2614376798
+  api路由拦截:508410872/1525114890
+  定义next-config类型:508410872/3908748801
+  proxy服务:508410872/3872017038
+  nextjs微服务原理:508410872/2227551066
+  token转发:508410872/434343828
+  Nextjs数据context传递:508410872/797483832
+  封装接口请求函数:508410872/2240315021
+网络基础
+  github访问超时优化:2434046563/2969048666
+  ipv4:2434046563/1800021248
+React常用组件
+  图片hover组件:3386584767/229803107
+  图片预占位组件:3386584767/4224004186
+  读取一次即销毁的refValue:3386584767/2828562329
+  Async Hook组件:3386584767/428392163
+  验证码发送计时组件:3386584767/4122814041
+  复制剪贴板hook:3386584767/3811372255
+  下拉菜单:3386584767/240004658
+  利用vsc-styled插件来写内联样式:3386584767/3524918532
+  React组件编写建议:3386584767/1089500342
+  懒加载组件:3386584767/2402674395
+  Event Hook组件:3386584767/3405374941
+  ErrorBoundary异常处理组件:3386584767/2301907056
+Redux状态管理
+  redux-thunk:2764988763/4201226163
+  applyMiddleware:2764988763/3585008135
+  createStore:2764988763/3792869889
+  bindActionCreators:2764988763/3265009463
+  compose:2764988763/2924221462
+  nextListener的双缓冲技术:2764988763/1607140429
+  combineReducers:2764988763/4269594718
+  redux思想:2764988763/298299426
+微信小程序
+  公众号H5登录:1176029962/1822327377
+  view、text和block:1176029962/3078594688
+  webview小程序基本架构设计:1176029962/937947231
+  小程序审核注意项:1176029962/661755283
+  webview小程序解决方案:1176029962/117626558
+  返回前刷新上一个页面:1176029962/167513258
+  loginCode和加密向量:1176029962/4260069288
+  webview小程序3种登录方案:1176029962/4014625393
+  webview调试方法:1176029962/1958917575
+  获取url参数:1176029962/1056032720
+HTML超文本标记语言
+  常用meta和link标签:1778217061/97768522
+  可编辑区域:1778217061/3732602755
+  表单输入:1778217061/254531858
+  表格:1778217061/1341280476
+  移动端禁用双指放大:1778217061/3355241170
+  iframe:1778217061/3991090401
+  列表:1778217061/2661953206
+C++基础
+  虚函数表:4188628137/621493120
+  命名空间:4188628137/773103529
+  右值引用与移动语义:4188628137/2339477131
+  模板与constexpr:4188628137/3963157389
+  qt图形库
+    qbs配置:4188628137/1211187294/3578342713
+  函数类型与函数指针:4188628137/2191458484
+HTTP协议
+  HTTP缓存机制:2940136764/2223333868
+  基本概念:2940136764/3330623254
+  HTTP加密:2940136764/3241772204
+  HTTP跨域之OPTIONS请求:2940136764/1856434547
+  为服务器配置HTTPS:2940136764/3522471317
+Golang基础
+  golang快速上手:1722292150/115903947
+随便写点儿？
+  行动踪迹:993966897/2986337501
+  提车检查清单:993966897/300735187
+  如果是我面试别人:993966897/2054113473
+  双系统使用原则:993966897/3843285428
+  超实用食品添加剂风险等级表完整版:993966897/2124730187
+  记录一次bug：nextjs同构环境下的环境变量:993966897/1009886232
+  查看npm包版本兼容:993966897/2519496741
+  popmotion库的坑:993966897/2483717122
+  每日总结:993966897/2837329691
+  moment注意:993966897/1905070256
+  泰拉瑞亚发展路线:993966897/259568889
+  副业：创业的起点:993966897/614380483
+  vim列编辑:993966897/2043676372
+  障:993966897/728076226
+  提效方法论:993966897/1982567995
+  饱和脂肪含量较高的常见食物汇总表:993966897/2507340244
+  关于前端复用性:993966897/3541864083
+  车贷方案风险分析:993966897/987655758
+  正则匹配结果伪数组解构报错:993966897/3116679717
+  echarts之zrender的clone函数问题:993966897/1391436950
+  萧条期下的理性购车建议：别让买车成为你的负担:993966897/2745079721
+  记录一次bug：js整数溢出:993966897/2369586623
+  什么是反式脂肪:993966897/2974473958
+  项目规范:993966897/3381504283
+  正确喝水的习惯建议:993966897/2003633667
+  收藏网址:993966897/2352617901
+  高危食品添加剂清单:993966897/687629538
+  一些让人抓狂的:993966897/677764916
+  绿灯零食品牌推荐清单:993966897/1343906467
+  文件中转站:993966897/3030267743
+Node
+  下载tarball并解压到目录:625821563/2801963710
+  接收base64图片:625821563/1457111995
+  koa中间件机制:625821563/1140030425
+  node解析url参数:625821563/2632859634
+  简单的文件读写封装:625821563/4138430119
+  从URL加载commonjs模块:625821563/3701526767
+  cli头注释:625821563/427827615
+  获取本机IP（IPV4）:625821563/1877008917
+  执行命令:625821563/243025050
+  node路由:625821563/1783599450
+  获取post-body:625821563/152537229
+  在node中混合加载esm:625821563/1384337656
+  promisify:625821563/2174455366
+  base64:625821563/3482464886
+性能优化
+  用于撤销与反撤销的对象池:4236594509/2447900016
+  关于时间计算:4236594509/2810641468
+  api缓存:4236594509/616059411
+  并发请求队列:4236594509/4262854760
+  前端性能优化:4236594509/1634682499
+  打包优化:4236594509/1429425988
+  memorize函数:4236594509/2862382485
+数据结构算法
+  KMP算法:1141801517/765481613
+  排序算法:1141801517/1935562632
+  凯撒加密:1141801517/2204975184
+  计算字符串hash指纹:1141801517/2002727963
+  base64算法:1141801517/1019328953
+  树遍历、删除节点:1141801517/2088893761
+Reflect反射原理
+  实现一个基于IOC的HttpServer框架
+    实现一个基于IOC的HttpServer框架（上）:3417095202/2366755219/841131103
+    实现一个基于IOC的HttpServer框架（下）:3417095202/2366755219/2325660474
+  reflect-metadata中HashMap巨大Object的读取速度优化:3417095202/1495230994
+  依赖注入（IOC）实现:3417095202/2381535473
+  reflect-metadata实现及其原理:3417095202/3895616228
+Kubernetes
+  运行第一个docker实例:2596981504/3035985665
+每日总结:993966897/2837329691
+  2021-Q2:2837329691/1853812908
+  2021年1月11日:2837329691/4066753242
+React生态
+  react16以后不需要的一些操作:3078029389/647441603
+  useSelector和reselect源码阅读:3078029389/3685947818
+  hoist-non-react-statics源码阅读:3078029389/285130836
+  React生态源码阅读:3078029389/884116066
+  React-Redux干了什么:3078029389/2151995243
+Javascript基础
+  bind call apply和原理:2978716364/356885307
+  ES7,ES8,ES9,ES10新特性:2978716364/2649468287
+  判断是不是移动端:2978716364/206694332
+  图片转base64:2978716364/434052496
+  封装一个ajax:2978716364/3553352152
+  常用工具函数包:2978716364/3056560742
+  localStorage缓存:2978716364/3050922274
+  作用域和闭包:2978716364/998455692
+  节流防抖:2978716364/2843774098
+  去除文档中nbsp:2978716364/1956587549
+  实现URL参数parser:2978716364/209705140
+  HTML特殊字符转义:2978716364/1047778673
+  事件捕获冒泡:2978716364/3324732595
+  剪贴板操作:2978716364/2926614865
+  类和继承:2978716364/1566775461
+  简单算法（需求）:2978716364/2072536690
+  fiber遍历:2978716364/3278977223
+  组合子:2978716364/3027668162
+  es7
+    async-await原理:2978716364/233988067/2765226939
+  vdom渲染:2978716364/2677610321
+  文件下载:2978716364/2459278371
+  随机颜色:2978716364/2478630241
+  数组克隆-数组 ES6 API实现:2978716364/2675019602
+  双向绑定:2978716364/1132526100
+  es6
+    promise原理:2978716364/2062905205/3843954055
+  判断页面滚动到底部（React）:2978716364/376631996
+  返回网页顶部:2978716364/1198556108
+  iframe心跳检测:2978716364/783909842
+  获取文件夹名:2978716364/520755723
+  tryAsync:2978716364/1914603159
+  文件读取与文件拖拽上传:2978716364/1337969239
+  is常用判断:2978716364/4203566044
+  偏函数与柯理化:2978716364/1510142354
+  监听组合键:2978716364/229414244
+  保存文件到本地:2978716364/1394725013
+  深拷贝:2978716364/3665591559
+  矩形相交:2978716364/2704789477
+  canvas
+    canvas路径绘制:2978716364/2778688536/1890648330
+    ImageData操作:2978716364/2778688536/1752333048
+    rgba与hex转换:2978716364/2778688536/735258978
+    打印到图片:2978716364/2778688536/1735350755
+  上传和发送图片:2978716364/785722933
+  join:2978716364/677501143
+  获取元素距离文档顶部的距离:2978716364/3882072986
+  rem布局原理:2978716364/2521075191
+  发布订阅:2978716364/4257520836
+  进入视口范围检测:2978716364/4294088333
+  可迭代对象（iterable）:2978716364/1127391874
+  chatgpt最大输入token限制截取:2978716364/1568078727
+  滚动到顶部:2978716364/3041376231
+  拖拽排序:2978716364/1464954900
+  解决Promise竞态问题:2978716364/3122202523
+  原型链:2978716364/200855344
+  监听拖拽:2978716364/308647239
+  classnames:2978716364/460000788
+  JSONP跨域:2978716364/4207234616
+编译原理
+  理解递归下降分析和parsec应用:294358179/183143079
+  不确定下推自动机:294358179/1876953063
+  Jsx语法BNF实现:294358179/1625631883
+ECharts
+  公共配置项:4251021762/1486389434
+  图表实例初始化和更新逻辑:4251021762/1984913173
+前端构建工具
+  阿里oss
+    在nodejs上使用ossApi:2015619411/1095965430/224096234
+  docker
+    WSL数据迁移:2015619411/4065722285/2243153884
+    WSL内存占用过高解决:2015619411/4065722285/1612296548
+    拷贝镜像文件到本地:2015619411/4065722285/1462822815
+    查看后台日志:2015619411/4065722285/899676556
+    前端项目docker部署:2015619411/4065722285/155063932
+    清理overlay2:2015619411/4065722285/2866681540
+    ubuntu安装docker:2015619411/4065722285/3867321025
+    docker容器使用宿主http代理:2015619411/4065722285/3207175842
+    k8s基本概念:2015619411/4065722285/1777871691
+    一键清理none镜像:2015619411/4065722285/956842833
+    构建指定平台镜像:2015619411/4065722285/3571255705
+    在docker镜像中安装docker:2015619411/4065722285/3532865029
+    docker项目更新:2015619411/4065722285/2034324422
+    CI环境docker镜像拉取次数限制:2015619411/4065722285/2939267528
+  nginx
+    nginx目录结构:2015619411/2759310851/918086797
+    nginx安装和常用命令:2015619411/2759310851/586382315
+    使用nginx部署nextjs:2015619411/2759310851/3914274422
+    使用nginx来升级HTTPS:2015619411/2759310851/3991053642
+    nginx日志:2015619411/2759310851/3416867986
+  babel
+    安装:2015619411/2979524233/386198089
+  terser
+    terser快捷压缩命令:2015619411/1101211557/2366502471
+  webpack
+    webpack之loader和plugin:2015619411/3119647264/2725041073
+    关闭dev-server的log:2015619411/3119647264/3220040592
+    真机（远程）调试:2015619411/3119647264/2754994928
+    接入jsdelivr:2015619411/3119647264/3421964246
+    webpack缓存原理:2015619411/3119647264/3685763840
+    cra构建工具react-scripts:2015619411/3119647264/3166498312
+    热更新watchOptions:2015619411/3119647264/1589484110
+    plugin
+      BannerPlugin:2015619411/3119647264/3916310420/3517195473
+  包管理器
+    yarn配置文件:2015619411/329972675/1262211574
+    npm常用命令:2015619411/329972675/3476997871
+CSS层叠样式表
+  图片（替换型元素）内容填充和对齐方式:4027471851/1697617397
+  水平居中:4027471851/928450487
+  媒体查询:4027471851/3593352492
+  styled-components使用:4027471851/2522061123
+  三角形:4027471851/1888310598
+  盒子模型:4027471851/2576220118
+  控制元素打印时样式:4027471851/3694572263
+  flex:4027471851/948970347
+  线性渐变:4027471851/2903940535
+  水平滚动容器:4027471851/2360280977
+  水平垂直居中:4027471851/2740982896
+  css实现八卦图:4027471851/821026532
+  伪元素实现分割线:4027471851/3455960759
+  CSS3选择器:4027471851/528583455
+  视觉设计:4027471851/3304064259
+  mask蒙版:4027471851/334713273
+  躲避点击:4027471851/4195876060
+  常用layout:4027471851/3651921917
+  IOS安全区边距:4027471851/3924029482
+  解决z-index不起作用:4027471851/380233427
+  input样式重置:3208342803/2230159762
+  垂直居中:4027471851/2714562762
+Web3
+  什么是加密货币质押:3516500479/2416906532
+  Freqtrade量化交易长期亏损是否在刻舟求剑:3516500479/3742290617
+  优化比特币策略网格中的网格增量:3516500479/366798771
+  freqtrade加仓间隔优化技巧:3516500479/86657743
+  搭建freqtrade加密货币量化交易机器人:3516500479/801253423
+  了解Solana的历史:3516500479/1071144108
+  如何使用freqtrade通过Python回测策略并交易加密货币:3516500479/432783825
+  Freqtrade避免滑点的技巧:3516500479/68730876
+  SOL:3516500479/2570065802
+  freqtrade多空仓位均衡管理策略优化:3516500479/166874898
+  freqtrade配置文件说明:3516500479/3337673677
+  freqtrade镜像arima报错NoModuleNamedNumpy:3516500479/460203749
+  freqtrade策略跟随BTC涨跌优化:3516500479/2513508138
+  提高合约期货交易员水平的五个关键点:3516500479/4286082747
+  比特币减半将如何影响其未来价格:3516500479/1047007885
+  ETH:3516500479/801163211
+  freqtrade指标EWO抄底指标分析:3516500479/52137657
+  Web3行业技能要求总结:3516500479/2150131188
+  BOLL布林线怎么看:3516500479/3841763140
+  如何制作NFT:3516500479/4159650434
+  2024年使用加密货币赚钱的8种最佳方法:3516500479/602008773
+  Freqtrade如何正确DCA:3516500479/1606919060
+  freqtrade策略E0V1E支撑位解读:3516500479/1259322740
+  Freqtrade量化策略的现状与挑战:3516500479/684004200
+  什么是加密货币对冲:3516500479/2588887233
+  什么是永续合约:3516500479/3703277199
+  如何抓住加密货币空投机会:3516500479/3247989789
+  什么是加密货币套利交易:3516500479/2603880987
+  Freqtrade回测移动止损陷阱:3516500479/577631655
+  BTC:3516500479/3176990918
+  趋势交易与背离交易优缺点对比分析:3516500479/1081440418
+  进入主流加密时代:3516500479/3026991838
+  freqtrade策略如何优化:3516500479/3059993749
+浏览器基础
+  页面回流与重绘:347238056/3570067778
+  浏览器内核:347238056/3788607556
+  页面渲染原理:347238056/2486250279
+  PWA离线应用:347238056/2823386006
+  从输入URL到页面渲染:347238056/4144046512
+Typescript基础
+  对比Monad在TS和Haskell中的使用:3300794385/2162349897
+  类型协变与逆变:3300794385/3122073643
+  axios拦截器类型:3300794385/267348413
+  Typescript类型运算:3300794385/1393525338
+  使用ts-compiler来遍历AST处理你的代码:3300794385/3680080234
+  远程kv缓存优化:3300794385/3783534706
+React-Hooks
+  useProgress:3451527288/1361967700
+  useInterval:3451527288/1793779673
+  useCopy:3451527288/865364992
+  useAsync:3451527288/1826049885
+  useModal:3451527288/2956032774
+  useRouter:3451527288/1422930357
+  useEcharts:3451527288/3312377071
+  useTimer:3451527288/1763185345
+  useLoadScript:3451527288/351511116
+  useDerivedStateFromProps:3451527288/294402496
+  useIntersection:3451527288/2140043833
+  useInputHistory:3451527288/3653149325
+  useFormModal:3451527288/1224126869
+  useI18N:3451527288/3122065372
+  useSetParticalState:3451527288/3769657112
+NestJs
+  参数字段过滤器:1017805429/1705031488
+  类加载关系及异常定位:1017805429/3397853211
+  定时:1017805429/1540140499
+  entity设计规范:1017805429/458686663
+  使用nowsh-serverless部署nestjs:1017805429/2271973388
+  nestjs断点调试:1017805429/382985625
+`
+    window.__blog = `%23%23%23%20next%20%E5%87%BD%E6%95%B0%0A%0A%60%60%60js%0Afunction%20get_next(str)%20%7B%0A%20%20const%20next%20%3D%20Array(str.length).fill(0)%0A%20%20let%20i%20%3D%201%0A%20%20let%20m%20%3D%200%0A%0A%20%20while%20(i%20%3C%20str.length)%20%7B%0A%20%20%20%20if%20(str%5Bi%5D%20%3D%3D%3D%20str%5Bm%5D)%20%7B%0A%20%20%20%20%20%20next%5Bi%5D%20%3D%20%2B%2Bm%0A%20%20%20%20%20%20i%2B%2B%0A%20%20%20%20%7D%0A%20%20%20%20if%20(str%5Bi%5D%20!%3D%3D%20str%5Bm%5D)%20%7B%0A%20%20%20%20%20%20if%20(m%20%3D%3D%3D%200)%20%7B%0A%20%20%20%20%20%20%20%20next%5Bi%5D%20%3D%200%0A%20%20%20%20%20%20%20%20i%2B%2B%0A%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20m%20%3D%20next%5Bm%20-%201%5D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20return%20next%0A%7D%0A%60%60%60%0A%0A%23%23%23%20kmp%20%E5%87%BD%E6%95%B0%0A%0A%60%60%60js%0Afunction%20kmp(str%2C%20subStr)%20%7B%0A%20%20let%20i%20%3D%200%0A%20%20let%20j%20%3D%200%0A%0A%20%20const%20next%20%3D%20get_next(subStr)%0A%0A%20%20while%20(i%20%3C%3D%20str.length)%20%7B%0A%20%20%20%20if%20(subStr%5Bj%5D%20%3D%3D%3D%20str%5Bi%5D)%20%7B%0A%20%20%20%20%20%20i%2B%2B%0A%20%20%20%20%20%20j%2B%2B%0A%20%20%20%20%20%20if%20(j%20%3D%3D%3D%20subStr.length)%20%7B%0A%20%20%20%20%20%20%20%20return%20i%20-%20j%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20if%20(j%20%3D%3D%3D%200)%20%7B%0A%20%20%20%20%20%20%20%20i%2B%2B%0A%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20j%20%3D%20next%5Bj%20-%201%5D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20return%20-1%0A%7D%0A%60%60%60%0A%0Anext%5Bj%5D%E5%B0%B1%E6%98%AF%E6%A8%A1%E5%BC%8F%E4%B8%B2%22p1...pj%22%E4%B8%AD%E6%9C%80%E5%A4%A7%E5%85%AC%E5%85%B1%E5%89%8D%E5%90%8E%E7%BC%80%E9%95%BF%E5%BA%A6%EF%BC%8C%E5%A6%82%E6%9E%9C%E6%B2%A1%E6%9C%89%E5%B0%B1%2B1%EF%BC%88%E5%8D%B3%20next%5Bj-1%5D%2B1%EF%BC%89%EF%BC%9Bkmp%20%E5%8C%B9%E9%85%8D%E4%B8%AD%E5%A4%B1%E9%85%8D%E6%97%B6%EF%BC%8Ci%20%E4%B8%8D%E5%8F%98%EF%BC%88%E4%B8%BB%E4%B8%B2%E4%B8%8D%E5%9B%9E%E6%BA%AF%EF%BC%89%EF%BC%8Cj%20%3D%20next%5Bj%5D%EF%BC%8C%E7%84%B6%E5%90%8E%E7%BB%A7%E7%BB%AD%E5%BE%80%E5%90%8E%E5%8C%B9%E9%85%8D%E3%80%82%E5%A6%82%E6%9E%9C%20j%20%3D%3D%200%EF%BC%8Ci%20%E5%92%8C%20j%20%E9%83%BD%2B1%E3%80%82%E5%A6%82%E6%9E%9C%20j%20%E5%A4%A7%E4%BA%8E%E6%A8%A1%E5%BC%8F%E4%B8%B2%E9%95%BF%E5%BA%A6%E5%8D%B3%E5%8C%B9%E9%85%8D%E6%88%90%E5%8A%9F%EF%BC%8C%E8%BF%94%E5%9B%9E%20i%20-%20%E6%A8%A1%E5%BC%8F%E4%B8%B2%E9%95%BF%E5%BA%A6%E4%BD%9C%E4%B8%BA%E7%BB%93%E6%9E%9C%E3%80%82%0A%0A%E6%AF%94%E5%A6%82%E6%A8%A1%E5%BC%8F%E4%B8%B2%22abaabcac%22%EF%BC%8Cnext%5B%5D%20%3D%20%5B0%2C1%2C1%2C2%2C2%2C3%2C1%2C2%5D%0A%0A%60%60%60txt%0Aa%200%20%EF%BC%88next%5B1%5D%20%3D%3D%200%EF%BC%89%0A%0Aab%201%20%EF%BC%88%E6%B2%A1%E6%9C%89%E5%85%AC%E5%85%B1%E5%89%8D%E5%90%8E%E7%BC%80%EF%BC%8C%2B1%E3%80%82next%5B2%5D%20%3D%20next%5B1%5D%2B1%EF%BC%8C%E5%8D%B3%20next%5B2%5D%3D%3D1%EF%BC%89%0A%0Aaba%201%20%EF%BC%88%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E5%90%8E%E7%BC%80%22a%22%EF%BC%8C%E9%95%BF%E5%BA%A6%201%EF%BC%89%0A%0Aabaa%202%20%EF%BC%88%E6%B2%A1%E6%9C%89%E5%85%AC%E5%85%B1%E5%89%8D%E5%90%8E%E7%BC%80%EF%BC%8C%2B1%EF%BC%89%0A%0Aabaab%202%EF%BC%88%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E5%90%8E%E7%BC%80%22ab%22%EF%BC%8C%E9%95%BF%E5%BA%A6%202%EF%BC%89%0A%0Aabaabc%203%20%EF%BC%88%E6%B2%A1%E6%9C%89%E5%85%AC%E5%85%B1%E5%89%8D%E5%90%8E%E7%BC%80%EF%BC%8C%2B1%EF%BC%89%0A%0Aabaabca%201%EF%BC%88%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E5%90%8E%E7%BC%80%22a%22%EF%BC%8C%E9%95%BF%E5%BA%A6%201%EF%BC%89%0A%0Aabaabcac%202%20%EF%BC%88%E6%B2%A1%E6%9C%89%E5%85%AC%E5%85%B1%E5%89%8D%E5%90%8E%E7%BC%80%EF%BC%8C%2B1%EF%BC%89%0A%60%60%60%0A`
+    window.__updateTime = "1702131892"
+    </script><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"><meta name="keywords" content="量化交易,freqtrade,web3,react,antd,typescript,javascript,css,html,前端学习,前端进阶,个人博客"><meta name="description" content="### next 函数
+
+```js
+function get_next(str) {
+  const next = Array(str.length).fill(0)
+  let i = 1
+  let m = 0
+
+  w…"><script async src="/click-mask/click-mask.min.js"></script><title>KMP算法 - Saber2pr's Blog</title><script defer="defer" src="/zh/release/%5Bname%5D~49d0a29369ee2e2baac08e70c6d3.min.js"></script><script defer="defer" src="/zh/release/%5Bname%5D~10451da669ee2e2baac08e70c6d3.min.js"></script><script defer="defer" src="/zh/release/%5Bname%5D~0bc0478e69ee2e2baac08e70c6d3.min.js"></script><script defer="defer" src="/zh/release/%5Bname%5D~0e5d714b69ee2e2baac08e70c6d3.min.js"></script><script defer="defer" src="/zh/release/%5Bname%5D~e5bca7e469ee2e2baac08e70c6d3.min.js"></script><script defer="defer" src="/zh/release/%5Bname%5D~2754536869ee2e2baac08e70c6d3.min.js"></script><script defer="defer" src="/zh/release/index~bde52cb369ee2e2baac08e70c6d3.min.js"></script><script defer="defer" src="/zh/release/index~31743c5a69ee2e2baac08e70c6d3.min.js"></script><link href="/zh/release/index~e96e9bea69ee2e2baac08e70c6d3.css" rel="stylesheet"><link href="/zh/release/index~31743c5a69ee2e2baac08e70c6d3.css" rel="stylesheet"></head><body><div id="root-pre"><div class="ssr-topheader">
+    <a class="ssr-topheader-a" href="/zh/">Saber2pr's Blog</a>
+    </div><div class="ssr-wiki">
+      <div class="ssr-wiki-content">
+        <h1 class="ssr-content-title">KMP算法</h1>
+        <div class="ssr-content-main"><h3 id="next">next 函数</h3>
+<pre><code class="js language-js">function get_next(str) {
+  const next = Array(str.length).fill(0)
+  let i = 1
+  let m = 0
+
+  while (i &lt; str.length) {
+    if (str[i] === str[m]) {
+      next[i] = ++m
+      i++
+    }
+    if (str[i] !== str[m]) {
+      if (m === 0) {
+        next[i] = 0
+        i++
+      } else {
+        m = next[m - 1]
+      }
+    }
+  }
+  return next
+}
+</code></pre>
+<h3 id="kmp">kmp 函数</h3>
+<pre><code class="js language-js">function kmp(str, subStr) {
+  let i = 0
+  let j = 0
+
+  const next = get_next(subStr)
+
+  while (i &lt;= str.length) {
+    if (subStr[j] === str[i]) {
+      i++
+      j++
+      if (j === subStr.length) {
+        return i - j
+      }
+    } else {
+      if (j === 0) {
+        i++
+      } else {
+        j = next[j - 1]
+      }
+    }
+  }
+  return -1
+}
+</code></pre>
+<p>next[j]就是模式串"p1…pj"中最大公共前后缀长度，如果没有就+1（即 next[j-1]+1）；kmp 匹配中失配时，i 不变（主串不回溯），j = next[j]，然后继续往后匹配。如果 j == 0，i 和 j 都+1。如果 j 大于模式串长度即匹配成功，返回 i - 模式串长度作为结果。</p>
+<p>比如模式串"abaabcac"，next[] = [0,1,1,2,2,3,1,2]</p>
+<pre><code class="txt language-txt">a 0 （next[1] == 0）
+
+ab 1 （没有公共前后缀，+1。next[2] = next[1]+1，即 next[2]==1）
+
+aba 1 （最长公共前后缀"a"，长度 1）
+
+abaa 2 （没有公共前后缀，+1）
+
+abaab 2（最长公共前后缀"ab"，长度 2）
+
+abaabc 3 （没有公共前后缀，+1）
+
+abaabca 1（最长公共前后缀"a"，长度 1）
+
+abaabcac 2 （没有公共前后缀，+1）
+</code></pre></div>
+      </div>
+      <div class="ssr-wiki-menu">
+        <div style="margin: 3rem 0 10rem"><ul class="ssr-ul"><li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Html2canvas</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/4184327779/1400959724/" class="ssr-a ">浏览器打印dom节点</a></li>
+<li class="ssr-li"><a href="/zh/posts/4184327779/2277086981/" class="ssr-a ">ios兼容</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">MacOS相关</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/32822141/3167946729/" class="ssr-a ">DS_Store文件</a></li>
+<li class="ssr-li"><a href="/zh/posts/32822141/1216714181/" class="ssr-a ">查看CPU架构</a></li>
+<li class="ssr-li"><a href="/zh/posts/32822141/2670574645/" class="ssr-a ">清理磁盘占用</a></li>
+<li class="ssr-li"><a href="/zh/posts/32822141/2264140028/" class="ssr-a ">启用任何来源</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Haskell基础</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/1500898427/2723069493/" class="ssr-a ">Haskell与JS</a></li>
+<li class="ssr-li"><a href="/zh/posts/1500898427/719576122/" class="ssr-a ">搭建haskell环境</a></li>
+<li class="ssr-li"><a href="/zh/posts/1500898427/4065193100/" class="ssr-a ">函数式编程基本概念</a></li>
+<li class="ssr-li"><a href="/zh/posts/1500898427/517802640/" class="ssr-a ">函数式设计</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Github-API</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/3519632019/495205379/" class="ssr-a ">RestFul-v3</a></li>
+<li class="ssr-li"><a href="/zh/posts/3519632019/740280299/" class="ssr-a ">使用Action自动化发布Docker镜像</a></li>
+<li class="ssr-li"><a href="/zh/posts/3519632019/298709816/" class="ssr-a ">使用Action自动化发布Pages</a></li>
+<li class="ssr-li"><a href="/zh/posts/3519632019/2320422255/" class="ssr-a ">使用github-issue api做评论系统</a></li>
+<li class="ssr-li"><a href="/zh/posts/3519632019/4003128456/" class="ssr-a ">github鉴权</a></li>
+<li class="ssr-li"><a href="/zh/posts/3519632019/4135730446/" class="ssr-a ">使用github-action发布npm包</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">AI相关</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/2674059917/846645548/" class="ssr-a ">使用assistant-ui开发私有Gpt界面</a></li>
+<li class="ssr-li"><a href="/zh/posts/2674059917/329311398/" class="ssr-a ">AIAgent架构</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">React原理</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/93045664/2799513546/" class="ssr-a ">事件冒泡与Portals</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/3388403223/" class="ssr-a ">ref转发</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/941840309/" class="ssr-a ">Batch update</a></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">reconciler实现</span></div><ul class="ssr-ul"><li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Hook</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/93045664/1983513371/2757247829/2344878510/" class="ssr-a ">Use ref</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/1983513371/2757247829/3580118952/" class="ssr-a ">Use memo</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/1983513371/2757247829/2690326048/" class="ssr-a ">Use state</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/1983513371/2757247829/3998410199/" class="ssr-a ">Create context</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/1983513371/2757247829/2808238690/" class="ssr-a ">Use effect</a></li></ul></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/1983513371/3795080668/" class="ssr-a ">Perform work</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/1983513371/178127104/" class="ssr-a ">Commit work</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/1983513371/912850102/" class="ssr-a ">Work loop</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/1983513371/1752134054/" class="ssr-a ">Perform unit of work</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/1983513371/1460438571/" class="ssr-a ">全局变量</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/1983513371/2630219977/" class="ssr-a ">Update host properties</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/1983513371/1297038992/" class="ssr-a ">Create element</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/1983513371/2571628068/" class="ssr-a ">Begin work</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/1983513371/2461584387/" class="ssr-a ">Commit all work</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/1983513371/2489096554/" class="ssr-a ">Render</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/1983513371/3554215910/" class="ssr-a ">Reconcile children</a></li></ul></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/1616101240/" class="ssr-a ">React中的错误处理</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/1879904057/" class="ssr-a ">context_rerender方案代替redux</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/2815536621/" class="ssr-a ">React函数式编程</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/416731394/" class="ssr-a ">propTypes验证</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/2468248631/" class="ssr-a ">服务端渲染SSR原理</a></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">数据结构类型</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/93045664/2486782765/794117400/" class="ssr-a ">关于TSX的类型定义</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/2486782765/2475351125/" class="ssr-a ">Fiber数据结构</a></li></ul></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/4270092731/" class="ssr-a ">生命周期</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/3007037269/" class="ssr-a ">如何找到alternate</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/2911903262/" class="ssr-a ">keep-live方法</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/180055368/" class="ssr-a ">Context造成的rerender</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/2073903539/" class="ssr-a ">react-key与defaultValue</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/3803735211/" class="ssr-a ">React性能优化</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/3986822953/" class="ssr-a ">ref为什么能保持引用</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/1162395221/" class="ssr-a ">组件通信</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/358186174/" class="ssr-a ">React底层XSS防御</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/2832757990/" class="ssr-a ">useState使用props初始化的注意点</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/1871825397/" class="ssr-a ">遍历Fiber链表</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/1346301198/" class="ssr-a ">useEffect的deps规则</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/2664435509/" class="ssr-a ">React函数组件对比class组件</a></li>
+<li class="ssr-li"><a href="/zh/posts/93045664/2011034187/" class="ssr-a ">React-Fiber实现</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Linux相关</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/4216687053/3246035575/" class="ssr-a ">双系统重装后恢复ubuntu引导</a></li>
+<li class="ssr-li"><a href="/zh/posts/4216687053/1157872960/" class="ssr-a ">安装最新nodejs</a></li>
+<li class="ssr-li"><a href="/zh/posts/4216687053/776465468/" class="ssr-a ">shell命令</a></li>
+<li class="ssr-li"><a href="/zh/posts/4216687053/3760199443/" class="ssr-a ">ssh连接服务器</a></li>
+<li class="ssr-li"><a href="/zh/posts/4216687053/4179631472/" class="ssr-a ">tty终端</a></li>
+<li class="ssr-li"><a href="/zh/posts/4216687053/3481848118/" class="ssr-a ">开放端口</a></li>
+<li class="ssr-li"><a href="/zh/posts/4216687053/1372394815/" class="ssr-a ">设置全局http代理</a></li>
+<li class="ssr-li"><a href="/zh/posts/4216687053/2666601390/" class="ssr-a ">ubuntu维护</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">浏览器API</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/2844996852/1902495278/" class="ssr-a ">navigator对象</a></li>
+<li class="ssr-li"><a href="/zh/posts/2844996852/1362490476/" class="ssr-a ">Request animation frame</a></li>
+<li class="ssr-li"><a href="/zh/posts/2844996852/1499246381/" class="ssr-a ">requestIdleCallback方法</a></li>
+<li class="ssr-li"><a href="/zh/posts/2844996852/104107200/" class="ssr-a ">移动端获取clientXY</a></li>
+<li class="ssr-li"><a href="/zh/posts/2844996852/860483624/" class="ssr-a ">pageX,pageY,offsetX,offsetY,clientX,clientY,x,y,screenX,screenY区别</a></li>
+<li class="ssr-li"><a href="/zh/posts/2844996852/1632717425/" class="ssr-a ">Mutation observer</a></li>
+<li class="ssr-li"><a href="/zh/posts/2844996852/2397984433/" class="ssr-a ">DOM对象继承体系</a></li>
+<li class="ssr-li"><a href="/zh/posts/2844996852/3383505216/" class="ssr-a ">Document element</a></li>
+<li class="ssr-li"><a href="/zh/posts/2844996852/2913683787/" class="ssr-a ">offset、client、scroll区别</a></li>
+<li class="ssr-li"><a href="/zh/posts/2844996852/2662535883/" class="ssr-a ">clientHeight与scrollHeight区别</a></li></ul></li>
+<li class="ssr-li"><a href="/zh/posts/1412107753/" class="ssr-a ">Saber2pr's Blog</a></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Git版本控制</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/3398605015/2579148434/" class="ssr-a ">日报生成</a></li>
+<li class="ssr-li"><a href="/zh/posts/3398605015/3794619412/" class="ssr-a ">github与git</a></li>
+<li class="ssr-li"><a href="/zh/posts/3398605015/1191892009/" class="ssr-a ">Rebase</a></li>
+<li class="ssr-li"><a href="/zh/posts/3398605015/4154284617/" class="ssr-a ">使用密码连接github</a></li>
+<li class="ssr-li"><a href="/zh/posts/3398605015/1200456604/" class="ssr-a ">git清除登录状态</a></li>
+<li class="ssr-li"><a href="/zh/posts/3398605015/2867143539/" class="ssr-a ">Git提交报错RPCfailed-HTTP2</a></li>
+<li class="ssr-li"><a href="/zh/posts/3398605015/2939694414/" class="ssr-a ">Checkout</a></li>
+<li class="ssr-li"><a href="/zh/posts/3398605015/2463490981/" class="ssr-a ">检查最近1次提交变更内容</a></li>
+<li class="ssr-li"><a href="/zh/posts/3398605015/3733931656/" class="ssr-a ">设置用户名</a></li>
+<li class="ssr-li"><a href="/zh/posts/3398605015/1060207107/" class="ssr-a ">fork之后更新upstream</a></li>
+<li class="ssr-li"><a href="/zh/posts/3398605015/3347896858/" class="ssr-a ">浅克隆</a></li>
+<li class="ssr-li"><a href="/zh/posts/3398605015/3146128159/" class="ssr-a ">Branch</a></li>
+<li class="ssr-li"><a href="/zh/posts/3398605015/119733108/" class="ssr-a ">pull自动合并使用本地版本</a></li>
+<li class="ssr-li"><a href="/zh/posts/3398605015/2403297477/" class="ssr-a ">Log</a></li>
+<li class="ssr-li"><a href="/zh/posts/3398605015/3387022561/" class="ssr-a ">克隆git仓库中的文件夹或路径</a></li>
+<li class="ssr-li"><a href="/zh/posts/3398605015/4101871859/" class="ssr-a ">撤销上一次提交</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">其他常用命令</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/1004006279/2281759021/" class="ssr-a ">win常用命令</a></li>
+<li class="ssr-li"><a href="/zh/posts/1004006279/3577021338/" class="ssr-a ">cad基础命令</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Wordpress</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/678694731/2112205065/" class="ssr-a ">数据库连接问题</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">练习</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/1866621996/2547811729/" class="ssr-a ">来测试一下？</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">博客建设日志</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/3847924491/657262907/" class="ssr-a ">网站重构、优化日志</a></li>
+<li class="ssr-li"><a href="/zh/posts/3847924491/4078533301/" class="ssr-a ">网站架构和技术栈</a></li>
+<li class="ssr-li"><a href="/zh/posts/3847924491/886977854/" class="ssr-a ">Privacy policy</a></li>
+<li class="ssr-li"><a href="/zh/posts/3847924491/2814565062/" class="ssr-a ">博客前台的更新程序发布！</a></li>
+<li class="ssr-li"><a href="/zh/posts/3847924491/2629084021/" class="ssr-a ">网站建设过程</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">VSCode插件开发</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/2964907711/3615466745/" class="ssr-a ">vscode插件编写教程</a></li>
+<li class="ssr-li"><a href="/zh/posts/2964907711/3727446140/" class="ssr-a ">实现一个WebIDE实时编译React</a></li>
+<li class="ssr-li"><a href="/zh/posts/2964907711/625161080/" class="ssr-a ">vscode插件路径相关</a></li>
+<li class="ssr-li"><a href="/zh/posts/2964907711/3947403448/" class="ssr-a ">使用默认浏览器打开链接</a></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Iceworks篇</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/2964907711/379706623/1371130024/" class="ssr-a ">iceworks-i18n多语言原理</a></li>
+<li class="ssr-li"><a href="/zh/posts/2964907711/379706623/2320633717/" class="ssr-a ">iceworks-project-creator实现原理简介</a></li>
+<li class="ssr-li"><a href="/zh/posts/2964907711/379706623/526561764/" class="ssr-a ">iceworks-app实现原理简介</a></li></ul></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Ant-Design组件</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/3208342803/2176036764/" class="ssr-a ">图片上传</a></li>
+<li class="ssr-li"><a href="/zh/posts/3208342803/694290787/" class="ssr-a ">Menu组件样式选择器</a></li>
+<li class="ssr-li"><a href="/zh/posts/3208342803/1222161386/" class="ssr-a ">Modal中form-reset无效</a></li>
+<li class="ssr-li"><a href="/zh/posts/3208342803/467124131/" class="ssr-a ">table前端分页与后端分页</a></li>
+<li class="ssr-li"><a href="/zh/posts/3208342803/1635262921/" class="ssr-a ">AntDesignTable固定列fixed无效？你可能忘了这一点！</a></li>
+<li class="ssr-li"><a href="/zh/posts/3208342803/1140962328/" class="ssr-a ">学习antd组件设计</a></li>
+<li class="ssr-li"><a href="/zh/posts/3208342803/2085038609/" class="ssr-a ">Table transfer</a></li>
+<li class="ssr-li"><a href="/zh/posts/3208342803/2869683577/" class="ssr-a ">form表单验证</a></li>
+<li class="ssr-li"><a href="/zh/posts/3208342803/2419708328/" class="ssr-a ">异步初始化表单项</a></li>
+<li class="ssr-li"><a href="/zh/posts/3208342803/3236632651/" class="ssr-a ">antd中的一些坑的细节(持续更新)</a></li>
+<li class="ssr-li"><a href="/zh/posts/3208342803/2678461770/" class="ssr-a ">右键菜单</a></li>
+<li class="ssr-li"><a href="/zh/posts/3208342803/4232543487/" class="ssr-a ">antd按需加载</a></li>
+<li class="ssr-li"><a href="/zh/posts/3208342803/2337096581/" class="ssr-a ">排序表格</a></li>
+<li class="ssr-li"><a href="/zh/posts/3208342803/3546697912/" class="ssr-a ">form中使用checkbox</a></li>
+<li class="ssr-li"><a href="/zh/posts/3208342803/2937019030/" class="ssr-a ">重置Modal样式</a></li>
+<li class="ssr-li"><a href="/zh/posts/3208342803/228891917/" class="ssr-a ">Modal遮罩双层滚动问题</a></li>
+<li class="ssr-li"><a href="/zh/posts/3208342803/2230159762/" class="ssr-a ">input样式重置</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">正则表达式</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/794273428/2650614757/" class="ssr-a ">基础语法</a></li>
+<li class="ssr-li"><a href="/zh/posts/794273428/2424771335/" class="ssr-a ">常用正则</a></li>
+<li class="ssr-li"><a href="/zh/posts/794273428/3263493545/" class="ssr-a ">理解正则表达式及常用正则表达式整理</a></li>
+<li class="ssr-li"><a href="/zh/posts/794273428/1183386531/" class="ssr-a ">学习技巧</a></li>
+<li class="ssr-li"><a href="/zh/posts/794273428/2142416038/" class="ssr-a ">Combine replacers</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">数据库</span></div><ul class="ssr-ul"><li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Mysql</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/350907895/2501908538/748097271/" class="ssr-a ">在512MB服务上运行mysql8</a></li>
+<li class="ssr-li"><a href="/zh/posts/350907895/2501908538/1875203988/" class="ssr-a ">常用命令</a></li>
+<li class="ssr-li"><a href="/zh/posts/350907895/2501908538/2369105520/" class="ssr-a ">使用docker安装mysql</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Mongodb</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/350907895/4026166152/3335538363/" class="ssr-a ">Nodejs操作mongodb</a></li>
+<li class="ssr-li"><a href="/zh/posts/350907895/4026166152/1726056664/" class="ssr-a ">添加数据库管理员</a></li>
+<li class="ssr-li"><a href="/zh/posts/350907895/4026166152/3462181640/" class="ssr-a ">mongodb增删査改</a></li></ul></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">基础设施建设</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/1756609922/1252730815/" class="ssr-a ">使用gitlab和drone实现自动化部署</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Nextjs服务端渲染</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/508410872/1788703944/" class="ssr-a ">利用Link实现Tab的问题与优化</a></li>
+<li class="ssr-li"><a href="/zh/posts/508410872/3354489317/" class="ssr-a ">Nextjs首屏渲染速度优化</a></li>
+<li class="ssr-li"><a href="/zh/posts/508410872/3624492405/" class="ssr-a ">ssr项目架构注意与优化</a></li>
+<li class="ssr-li"><a href="/zh/posts/508410872/909006418/" class="ssr-a ">非api反向代理</a></li>
+<li class="ssr-li"><a href="/zh/posts/508410872/2614376798/" class="ssr-a ">Nextjs自动静态优化存在的问题</a></li>
+<li class="ssr-li"><a href="/zh/posts/508410872/1525114890/" class="ssr-a ">api路由拦截</a></li>
+<li class="ssr-li"><a href="/zh/posts/508410872/3908748801/" class="ssr-a ">定义next-config类型</a></li>
+<li class="ssr-li"><a href="/zh/posts/508410872/3872017038/" class="ssr-a ">proxy服务</a></li>
+<li class="ssr-li"><a href="/zh/posts/508410872/2227551066/" class="ssr-a ">nextjs微服务原理</a></li>
+<li class="ssr-li"><a href="/zh/posts/508410872/434343828/" class="ssr-a ">token转发</a></li>
+<li class="ssr-li"><a href="/zh/posts/508410872/797483832/" class="ssr-a ">Nextjs数据context传递</a></li>
+<li class="ssr-li"><a href="/zh/posts/508410872/2240315021/" class="ssr-a ">封装接口请求函数</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">网络基础</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/2434046563/2969048666/" class="ssr-a ">github访问超时优化</a></li>
+<li class="ssr-li"><a href="/zh/posts/2434046563/1800021248/" class="ssr-a ">ipv4</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">React常用组件</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/3386584767/229803107/" class="ssr-a ">图片hover组件</a></li>
+<li class="ssr-li"><a href="/zh/posts/3386584767/4224004186/" class="ssr-a ">图片预占位组件</a></li>
+<li class="ssr-li"><a href="/zh/posts/3386584767/2828562329/" class="ssr-a ">读取一次即销毁的refValue</a></li>
+<li class="ssr-li"><a href="/zh/posts/3386584767/428392163/" class="ssr-a ">Async Hook组件</a></li>
+<li class="ssr-li"><a href="/zh/posts/3386584767/4122814041/" class="ssr-a ">验证码发送计时组件</a></li>
+<li class="ssr-li"><a href="/zh/posts/3386584767/3811372255/" class="ssr-a ">复制剪贴板hook</a></li>
+<li class="ssr-li"><a href="/zh/posts/3386584767/240004658/" class="ssr-a ">下拉菜单</a></li>
+<li class="ssr-li"><a href="/zh/posts/3386584767/3524918532/" class="ssr-a ">利用vsc-styled插件来写内联样式</a></li>
+<li class="ssr-li"><a href="/zh/posts/3386584767/1089500342/" class="ssr-a ">React组件编写建议</a></li>
+<li class="ssr-li"><a href="/zh/posts/3386584767/2402674395/" class="ssr-a ">懒加载组件</a></li>
+<li class="ssr-li"><a href="/zh/posts/3386584767/3405374941/" class="ssr-a ">Event Hook组件</a></li>
+<li class="ssr-li"><a href="/zh/posts/3386584767/2301907056/" class="ssr-a ">ErrorBoundary异常处理组件</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Redux状态管理</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/2764988763/4201226163/" class="ssr-a ">redux-thunk</a></li>
+<li class="ssr-li"><a href="/zh/posts/2764988763/3585008135/" class="ssr-a ">Apply middleware</a></li>
+<li class="ssr-li"><a href="/zh/posts/2764988763/3792869889/" class="ssr-a ">Create store</a></li>
+<li class="ssr-li"><a href="/zh/posts/2764988763/3265009463/" class="ssr-a ">Bind action creators</a></li>
+<li class="ssr-li"><a href="/zh/posts/2764988763/2924221462/" class="ssr-a ">Compose</a></li>
+<li class="ssr-li"><a href="/zh/posts/2764988763/1607140429/" class="ssr-a ">nextListener的双缓冲技术</a></li>
+<li class="ssr-li"><a href="/zh/posts/2764988763/4269594718/" class="ssr-a ">Combine reducers</a></li>
+<li class="ssr-li"><a href="/zh/posts/2764988763/298299426/" class="ssr-a ">redux思想</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">微信小程序</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/1176029962/1822327377/" class="ssr-a ">公众号H5登录</a></li>
+<li class="ssr-li"><a href="/zh/posts/1176029962/3078594688/" class="ssr-a ">view、text和block</a></li>
+<li class="ssr-li"><a href="/zh/posts/1176029962/937947231/" class="ssr-a ">webview小程序基本架构设计</a></li>
+<li class="ssr-li"><a href="/zh/posts/1176029962/661755283/" class="ssr-a ">小程序审核注意项</a></li>
+<li class="ssr-li"><a href="/zh/posts/1176029962/117626558/" class="ssr-a ">webview小程序解决方案</a></li>
+<li class="ssr-li"><a href="/zh/posts/1176029962/167513258/" class="ssr-a ">返回前刷新上一个页面</a></li>
+<li class="ssr-li"><a href="/zh/posts/1176029962/4260069288/" class="ssr-a ">loginCode和加密向量</a></li>
+<li class="ssr-li"><a href="/zh/posts/1176029962/4014625393/" class="ssr-a ">webview小程序3种登录方案</a></li>
+<li class="ssr-li"><a href="/zh/posts/1176029962/1958917575/" class="ssr-a ">webview调试方法</a></li>
+<li class="ssr-li"><a href="/zh/posts/1176029962/1056032720/" class="ssr-a ">获取url参数</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">HTML超文本标记语言</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/1778217061/97768522/" class="ssr-a ">常用meta和link标签</a></li>
+<li class="ssr-li"><a href="/zh/posts/1778217061/3732602755/" class="ssr-a ">可编辑区域</a></li>
+<li class="ssr-li"><a href="/zh/posts/1778217061/254531858/" class="ssr-a ">表单输入</a></li>
+<li class="ssr-li"><a href="/zh/posts/1778217061/1341280476/" class="ssr-a ">表格</a></li>
+<li class="ssr-li"><a href="/zh/posts/1778217061/3355241170/" class="ssr-a ">移动端禁用双指放大</a></li>
+<li class="ssr-li"><a href="/zh/posts/1778217061/3991090401/" class="ssr-a ">Iframe</a></li>
+<li class="ssr-li"><a href="/zh/posts/1778217061/2661953206/" class="ssr-a ">列表</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">C++基础</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/4188628137/621493120/" class="ssr-a ">虚函数表</a></li>
+<li class="ssr-li"><a href="/zh/posts/4188628137/773103529/" class="ssr-a ">命名空间</a></li>
+<li class="ssr-li"><a href="/zh/posts/4188628137/2339477131/" class="ssr-a ">右值引用与移动语义</a></li>
+<li class="ssr-li"><a href="/zh/posts/4188628137/3963157389/" class="ssr-a ">模板与constexpr</a></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">qt图形库</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/4188628137/1211187294/3578342713/" class="ssr-a ">qbs配置</a></li></ul></li>
+<li class="ssr-li"><a href="/zh/posts/4188628137/2191458484/" class="ssr-a ">函数类型与函数指针</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">HTTP协议</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/2940136764/2223333868/" class="ssr-a ">HTTP缓存机制</a></li>
+<li class="ssr-li"><a href="/zh/posts/2940136764/3330623254/" class="ssr-a ">基本概念</a></li>
+<li class="ssr-li"><a href="/zh/posts/2940136764/3241772204/" class="ssr-a ">HTTP加密</a></li>
+<li class="ssr-li"><a href="/zh/posts/2940136764/1856434547/" class="ssr-a ">HTTP跨域之OPTIONS请求</a></li>
+<li class="ssr-li"><a href="/zh/posts/2940136764/3522471317/" class="ssr-a ">为服务器配置HTTPS</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Golang基础</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/1722292150/115903947/" class="ssr-a ">golang快速上手</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">随便写点儿？</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/993966897/2986337501/" class="ssr-a ">行动踪迹</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/300735187/" class="ssr-a ">提车检查清单</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/2054113473/" class="ssr-a ">如果是我面试别人</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/3843285428/" class="ssr-a ">双系统使用原则</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/2124730187/" class="ssr-a ">超实用食品添加剂风险等级表完整版</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/1009886232/" class="ssr-a ">记录一次bug：nextjs同构环境下的环境变量</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/2519496741/" class="ssr-a ">查看npm包版本兼容</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/2483717122/" class="ssr-a ">popmotion库的坑</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/2837329691/" class="ssr-a ">每日总结</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/1905070256/" class="ssr-a ">moment注意</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/259568889/" class="ssr-a ">泰拉瑞亚发展路线</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/614380483/" class="ssr-a ">副业：创业的起点</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/2043676372/" class="ssr-a ">vim列编辑</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/728076226/" class="ssr-a ">障</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/1982567995/" class="ssr-a ">提效方法论</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/2507340244/" class="ssr-a ">饱和脂肪含量较高的常见食物汇总表</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/3541864083/" class="ssr-a ">关于前端复用性</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/987655758/" class="ssr-a ">车贷方案风险分析</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/3116679717/" class="ssr-a ">正则匹配结果伪数组解构报错</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/1391436950/" class="ssr-a ">echarts之zrender的clone函数问题</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/2745079721/" class="ssr-a ">萧条期下的理性购车建议：别让买车成为你的负担</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/2369586623/" class="ssr-a ">记录一次bug：js整数溢出</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/2974473958/" class="ssr-a ">什么是反式脂肪</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/3381504283/" class="ssr-a ">项目规范</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/2003633667/" class="ssr-a ">正确喝水的习惯建议</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/2352617901/" class="ssr-a ">收藏网址</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/687629538/" class="ssr-a ">高危食品添加剂清单</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/677764916/" class="ssr-a ">一些让人抓狂的</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/1343906467/" class="ssr-a ">绿灯零食品牌推荐清单</a></li>
+<li class="ssr-li"><a href="/zh/posts/993966897/3030267743/" class="ssr-a ">文件中转站</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Node</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/625821563/2801963710/" class="ssr-a ">下载tarball并解压到目录</a></li>
+<li class="ssr-li"><a href="/zh/posts/625821563/1457111995/" class="ssr-a ">接收base64图片</a></li>
+<li class="ssr-li"><a href="/zh/posts/625821563/1140030425/" class="ssr-a ">koa中间件机制</a></li>
+<li class="ssr-li"><a href="/zh/posts/625821563/2632859634/" class="ssr-a ">node解析url参数</a></li>
+<li class="ssr-li"><a href="/zh/posts/625821563/4138430119/" class="ssr-a ">简单的文件读写封装</a></li>
+<li class="ssr-li"><a href="/zh/posts/625821563/3701526767/" class="ssr-a ">从URL加载commonjs模块</a></li>
+<li class="ssr-li"><a href="/zh/posts/625821563/427827615/" class="ssr-a ">cli头注释</a></li>
+<li class="ssr-li"><a href="/zh/posts/625821563/1877008917/" class="ssr-a ">获取本机IP（IPV4）</a></li>
+<li class="ssr-li"><a href="/zh/posts/625821563/243025050/" class="ssr-a ">执行命令</a></li>
+<li class="ssr-li"><a href="/zh/posts/625821563/1783599450/" class="ssr-a ">node路由</a></li>
+<li class="ssr-li"><a href="/zh/posts/625821563/152537229/" class="ssr-a ">获取post-body</a></li>
+<li class="ssr-li"><a href="/zh/posts/625821563/1384337656/" class="ssr-a ">在node中混合加载esm</a></li>
+<li class="ssr-li"><a href="/zh/posts/625821563/2174455366/" class="ssr-a ">Promisify</a></li>
+<li class="ssr-li"><a href="/zh/posts/625821563/3482464886/" class="ssr-a ">base64</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">性能优化</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/4236594509/2447900016/" class="ssr-a ">用于撤销与反撤销的对象池</a></li>
+<li class="ssr-li"><a href="/zh/posts/4236594509/2810641468/" class="ssr-a ">关于时间计算</a></li>
+<li class="ssr-li"><a href="/zh/posts/4236594509/616059411/" class="ssr-a ">api缓存</a></li>
+<li class="ssr-li"><a href="/zh/posts/4236594509/4262854760/" class="ssr-a ">并发请求队列</a></li>
+<li class="ssr-li"><a href="/zh/posts/4236594509/1634682499/" class="ssr-a ">前端性能优化</a></li>
+<li class="ssr-li"><a href="/zh/posts/4236594509/1429425988/" class="ssr-a ">打包优化</a></li>
+<li class="ssr-li"><a href="/zh/posts/4236594509/2862382485/" class="ssr-a ">memorize函数</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ssr-dir-active">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">数据结构算法</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/1141801517/765481613/" class="ssr-a ssr-a-active">KMP算法</a></li>
+<li class="ssr-li"><a href="/zh/posts/1141801517/1935562632/" class="ssr-a ">排序算法</a></li>
+<li class="ssr-li"><a href="/zh/posts/1141801517/2204975184/" class="ssr-a ">凯撒加密</a></li>
+<li class="ssr-li"><a href="/zh/posts/1141801517/2002727963/" class="ssr-a ">计算字符串hash指纹</a></li>
+<li class="ssr-li"><a href="/zh/posts/1141801517/1019328953/" class="ssr-a ">base64算法</a></li>
+<li class="ssr-li"><a href="/zh/posts/1141801517/2088893761/" class="ssr-a ">树遍历、删除节点</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Reflect反射原理</span></div><ul class="ssr-ul"><li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">实现一个基于IOC的HttpServer框架</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/3417095202/2366755219/841131103/" class="ssr-a ">实现一个基于IOC的HttpServer框架（上）</a></li>
+<li class="ssr-li"><a href="/zh/posts/3417095202/2366755219/2325660474/" class="ssr-a ">实现一个基于IOC的HttpServer框架（下）</a></li></ul></li>
+<li class="ssr-li"><a href="/zh/posts/3417095202/1495230994/" class="ssr-a ">reflect-metadata中HashMap巨大Object的读取速度优化</a></li>
+<li class="ssr-li"><a href="/zh/posts/3417095202/2381535473/" class="ssr-a ">依赖注入（IOC）实现</a></li>
+<li class="ssr-li"><a href="/zh/posts/3417095202/3895616228/" class="ssr-a ">reflect-metadata实现及其原理</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Kubernetes</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/2596981504/3035985665/" class="ssr-a ">运行第一个docker实例</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">每日总结:993966897/2837329691</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/2837329691/1853812908/" class="ssr-a ">2021-Q2</a></li>
+<li class="ssr-li"><a href="/zh/posts/2837329691/4066753242/" class="ssr-a ">2021年1月11日</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">React生态</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/3078029389/647441603/" class="ssr-a ">react16以后不需要的一些操作</a></li>
+<li class="ssr-li"><a href="/zh/posts/3078029389/3685947818/" class="ssr-a ">useSelector和reselect源码阅读</a></li>
+<li class="ssr-li"><a href="/zh/posts/3078029389/285130836/" class="ssr-a ">hoist-non-react-statics源码阅读</a></li>
+<li class="ssr-li"><a href="/zh/posts/3078029389/884116066/" class="ssr-a ">React生态源码阅读</a></li>
+<li class="ssr-li"><a href="/zh/posts/3078029389/2151995243/" class="ssr-a ">React-Redux干了什么</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Javascript基础</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/2978716364/356885307/" class="ssr-a ">bind call apply和原理</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/2649468287/" class="ssr-a ">ES7,ES8,ES9,ES10新特性</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/206694332/" class="ssr-a ">判断是不是移动端</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/434052496/" class="ssr-a ">图片转base64</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/3553352152/" class="ssr-a ">封装一个ajax</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/3056560742/" class="ssr-a ">常用工具函数包</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/3050922274/" class="ssr-a ">localStorage缓存</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/998455692/" class="ssr-a ">作用域和闭包</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/2843774098/" class="ssr-a ">节流防抖</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/1956587549/" class="ssr-a ">去除文档中nbsp</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/209705140/" class="ssr-a ">实现URL参数parser</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/1047778673/" class="ssr-a ">HTML特殊字符转义</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/3324732595/" class="ssr-a ">事件捕获冒泡</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/2926614865/" class="ssr-a ">剪贴板操作</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/1566775461/" class="ssr-a ">类和继承</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/2072536690/" class="ssr-a ">简单算法（需求）</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/3278977223/" class="ssr-a ">fiber遍历</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/3027668162/" class="ssr-a ">组合子</a></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">es7</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/2978716364/233988067/2765226939/" class="ssr-a ">async-await原理</a></li></ul></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/2677610321/" class="ssr-a ">vdom渲染</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/2459278371/" class="ssr-a ">文件下载</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/2478630241/" class="ssr-a ">随机颜色</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/2675019602/" class="ssr-a ">数组克隆-数组 ES6 API实现</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/1132526100/" class="ssr-a ">双向绑定</a></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">es6</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/2978716364/2062905205/3843954055/" class="ssr-a ">promise原理</a></li></ul></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/376631996/" class="ssr-a ">判断页面滚动到底部（React）</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/1198556108/" class="ssr-a ">返回网页顶部</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/783909842/" class="ssr-a ">iframe心跳检测</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/520755723/" class="ssr-a ">获取文件夹名</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/1914603159/" class="ssr-a ">Try async</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/1337969239/" class="ssr-a ">文件读取与文件拖拽上传</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/4203566044/" class="ssr-a ">is常用判断</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/1510142354/" class="ssr-a ">偏函数与柯理化</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/229414244/" class="ssr-a ">监听组合键</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/1394725013/" class="ssr-a ">保存文件到本地</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/3665591559/" class="ssr-a ">深拷贝</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/2704789477/" class="ssr-a ">矩形相交</a></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Canvas</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/2978716364/2778688536/1890648330/" class="ssr-a ">canvas路径绘制</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/2778688536/1752333048/" class="ssr-a ">ImageData操作</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/2778688536/735258978/" class="ssr-a ">rgba与hex转换</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/2778688536/1735350755/" class="ssr-a ">打印到图片</a></li></ul></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/785722933/" class="ssr-a ">上传和发送图片</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/677501143/" class="ssr-a ">Join</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/3882072986/" class="ssr-a ">获取元素距离文档顶部的距离</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/2521075191/" class="ssr-a ">rem布局原理</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/4257520836/" class="ssr-a ">发布订阅</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/4294088333/" class="ssr-a ">进入视口范围检测</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/1127391874/" class="ssr-a ">可迭代对象（iterable）</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/1568078727/" class="ssr-a ">chatgpt最大输入token限制截取</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/3041376231/" class="ssr-a ">滚动到顶部</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/1464954900/" class="ssr-a ">拖拽排序</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/3122202523/" class="ssr-a ">解决Promise竞态问题</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/200855344/" class="ssr-a ">原型链</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/308647239/" class="ssr-a ">监听拖拽</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/460000788/" class="ssr-a ">Classnames</a></li>
+<li class="ssr-li"><a href="/zh/posts/2978716364/4207234616/" class="ssr-a ">JSONP跨域</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">编译原理</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/294358179/183143079/" class="ssr-a ">理解递归下降分析和parsec应用</a></li>
+<li class="ssr-li"><a href="/zh/posts/294358179/1876953063/" class="ssr-a ">不确定下推自动机</a></li>
+<li class="ssr-li"><a href="/zh/posts/294358179/1625631883/" class="ssr-a ">Jsx语法BNF实现</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Echarts</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/4251021762/1486389434/" class="ssr-a ">公共配置项</a></li>
+<li class="ssr-li"><a href="/zh/posts/4251021762/1984913173/" class="ssr-a ">图表实例初始化和更新逻辑</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">前端构建工具</span></div><ul class="ssr-ul"><li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">阿里oss</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/2015619411/1095965430/224096234/" class="ssr-a ">在nodejs上使用ossApi</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Docker</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/2015619411/4065722285/2243153884/" class="ssr-a ">WSL数据迁移</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/4065722285/1612296548/" class="ssr-a ">WSL内存占用过高解决</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/4065722285/1462822815/" class="ssr-a ">拷贝镜像文件到本地</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/4065722285/899676556/" class="ssr-a ">查看后台日志</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/4065722285/155063932/" class="ssr-a ">前端项目docker部署</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/4065722285/2866681540/" class="ssr-a ">清理overlay2</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/4065722285/3867321025/" class="ssr-a ">ubuntu安装docker</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/4065722285/3207175842/" class="ssr-a ">docker容器使用宿主http代理</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/4065722285/1777871691/" class="ssr-a ">k8s基本概念</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/4065722285/956842833/" class="ssr-a ">一键清理none镜像</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/4065722285/3571255705/" class="ssr-a ">构建指定平台镜像</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/4065722285/3532865029/" class="ssr-a ">在docker镜像中安装docker</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/4065722285/2034324422/" class="ssr-a ">docker项目更新</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/4065722285/2939267528/" class="ssr-a ">CI环境docker镜像拉取次数限制</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Nginx</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/2015619411/2759310851/918086797/" class="ssr-a ">nginx目录结构</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/2759310851/586382315/" class="ssr-a ">nginx安装和常用命令</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/2759310851/3914274422/" class="ssr-a ">使用nginx部署nextjs</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/2759310851/3991053642/" class="ssr-a ">使用nginx来升级HTTPS</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/2759310851/3416867986/" class="ssr-a ">nginx日志</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Babel</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/2015619411/2979524233/386198089/" class="ssr-a ">安装</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Terser</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/2015619411/1101211557/2366502471/" class="ssr-a ">terser快捷压缩命令</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Webpack</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/2015619411/3119647264/2725041073/" class="ssr-a ">webpack之loader和plugin</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/3119647264/3220040592/" class="ssr-a ">关闭dev-server的log</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/3119647264/2754994928/" class="ssr-a ">真机（远程）调试</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/3119647264/3421964246/" class="ssr-a ">接入jsdelivr</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/3119647264/3685763840/" class="ssr-a ">webpack缓存原理</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/3119647264/3166498312/" class="ssr-a ">cra构建工具react-scripts</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/3119647264/1589484110/" class="ssr-a ">热更新watchOptions</a></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Plugin</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/2015619411/3119647264/3916310420/3517195473/" class="ssr-a ">Banner plugin</a></li></ul></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">包管理器</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/2015619411/329972675/1262211574/" class="ssr-a ">yarn配置文件</a></li>
+<li class="ssr-li"><a href="/zh/posts/2015619411/329972675/3476997871/" class="ssr-a ">npm常用命令</a></li></ul></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">CSS层叠样式表</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/4027471851/1697617397/" class="ssr-a ">图片（替换型元素）内容填充和对齐方式</a></li>
+<li class="ssr-li"><a href="/zh/posts/4027471851/928450487/" class="ssr-a ">水平居中</a></li>
+<li class="ssr-li"><a href="/zh/posts/4027471851/3593352492/" class="ssr-a ">媒体查询</a></li>
+<li class="ssr-li"><a href="/zh/posts/4027471851/2522061123/" class="ssr-a ">styled-components使用</a></li>
+<li class="ssr-li"><a href="/zh/posts/4027471851/1888310598/" class="ssr-a ">三角形</a></li>
+<li class="ssr-li"><a href="/zh/posts/4027471851/2576220118/" class="ssr-a ">盒子模型</a></li>
+<li class="ssr-li"><a href="/zh/posts/4027471851/3694572263/" class="ssr-a ">控制元素打印时样式</a></li>
+<li class="ssr-li"><a href="/zh/posts/4027471851/948970347/" class="ssr-a ">Flex</a></li>
+<li class="ssr-li"><a href="/zh/posts/4027471851/2903940535/" class="ssr-a ">线性渐变</a></li>
+<li class="ssr-li"><a href="/zh/posts/4027471851/2360280977/" class="ssr-a ">水平滚动容器</a></li>
+<li class="ssr-li"><a href="/zh/posts/4027471851/2740982896/" class="ssr-a ">水平垂直居中</a></li>
+<li class="ssr-li"><a href="/zh/posts/4027471851/821026532/" class="ssr-a ">css实现八卦图</a></li>
+<li class="ssr-li"><a href="/zh/posts/4027471851/3455960759/" class="ssr-a ">伪元素实现分割线</a></li>
+<li class="ssr-li"><a href="/zh/posts/4027471851/528583455/" class="ssr-a ">CSS3选择器</a></li>
+<li class="ssr-li"><a href="/zh/posts/4027471851/3304064259/" class="ssr-a ">视觉设计</a></li>
+<li class="ssr-li"><a href="/zh/posts/4027471851/334713273/" class="ssr-a ">mask蒙版</a></li>
+<li class="ssr-li"><a href="/zh/posts/4027471851/4195876060/" class="ssr-a ">躲避点击</a></li>
+<li class="ssr-li"><a href="/zh/posts/4027471851/3651921917/" class="ssr-a ">常用layout</a></li>
+<li class="ssr-li"><a href="/zh/posts/4027471851/3924029482/" class="ssr-a ">IOS安全区边距</a></li>
+<li class="ssr-li"><a href="/zh/posts/4027471851/380233427/" class="ssr-a ">解决z-index不起作用</a></li>
+<li class="ssr-li"><a href="/zh/posts/3208342803/2230159762/" class="ssr-a ">input样式重置</a></li>
+<li class="ssr-li"><a href="/zh/posts/4027471851/2714562762/" class="ssr-a ">垂直居中</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Web3</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/3516500479/2416906532/" class="ssr-a ">什么是加密货币质押</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/3742290617/" class="ssr-a ">Freqtrade量化交易长期亏损是否在刻舟求剑</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/366798771/" class="ssr-a ">优化比特币策略网格中的网格增量</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/86657743/" class="ssr-a ">freqtrade加仓间隔优化技巧</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/801253423/" class="ssr-a ">搭建freqtrade加密货币量化交易机器人</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/1071144108/" class="ssr-a ">了解Solana的历史</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/432783825/" class="ssr-a ">如何使用freqtrade通过Python回测策略并交易加密货币</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/68730876/" class="ssr-a ">Freqtrade避免滑点的技巧</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/2570065802/" class="ssr-a ">Sol</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/166874898/" class="ssr-a ">freqtrade多空仓位均衡管理策略优化</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/3337673677/" class="ssr-a ">freqtrade配置文件说明</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/460203749/" class="ssr-a ">freqtrade镜像arima报错NoModuleNamedNumpy</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/2513508138/" class="ssr-a ">freqtrade策略跟随BTC涨跌优化</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/4286082747/" class="ssr-a ">提高合约期货交易员水平的五个关键点</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/1047007885/" class="ssr-a ">比特币减半将如何影响其未来价格</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/801163211/" class="ssr-a ">Eth</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/52137657/" class="ssr-a ">freqtrade指标EWO抄底指标分析</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/2150131188/" class="ssr-a ">Web3行业技能要求总结</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/3841763140/" class="ssr-a ">BOLL布林线怎么看</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/4159650434/" class="ssr-a ">如何制作NFT</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/602008773/" class="ssr-a ">2024年使用加密货币赚钱的8种最佳方法</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/1606919060/" class="ssr-a ">Freqtrade如何正确DCA</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/1259322740/" class="ssr-a ">freqtrade策略E0V1E支撑位解读</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/684004200/" class="ssr-a ">Freqtrade量化策略的现状与挑战</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/2588887233/" class="ssr-a ">什么是加密货币对冲</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/3703277199/" class="ssr-a ">什么是永续合约</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/3247989789/" class="ssr-a ">如何抓住加密货币空投机会</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/2603880987/" class="ssr-a ">什么是加密货币套利交易</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/577631655/" class="ssr-a ">Freqtrade回测移动止损陷阱</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/3176990918/" class="ssr-a ">Btc</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/1081440418/" class="ssr-a ">趋势交易与背离交易优缺点对比分析</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/3026991838/" class="ssr-a ">进入主流加密时代</a></li>
+<li class="ssr-li"><a href="/zh/posts/3516500479/3059993749/" class="ssr-a ">freqtrade策略如何优化</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">浏览器基础</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/347238056/3570067778/" class="ssr-a ">页面回流与重绘</a></li>
+<li class="ssr-li"><a href="/zh/posts/347238056/3788607556/" class="ssr-a ">浏览器内核</a></li>
+<li class="ssr-li"><a href="/zh/posts/347238056/2486250279/" class="ssr-a ">页面渲染原理</a></li>
+<li class="ssr-li"><a href="/zh/posts/347238056/2823386006/" class="ssr-a ">PWA离线应用</a></li>
+<li class="ssr-li"><a href="/zh/posts/347238056/4144046512/" class="ssr-a ">从输入URL到页面渲染</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Typescript基础</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/3300794385/2162349897/" class="ssr-a ">对比Monad在TS和Haskell中的使用</a></li>
+<li class="ssr-li"><a href="/zh/posts/3300794385/3122073643/" class="ssr-a ">类型协变与逆变</a></li>
+<li class="ssr-li"><a href="/zh/posts/3300794385/267348413/" class="ssr-a ">axios拦截器类型</a></li>
+<li class="ssr-li"><a href="/zh/posts/3300794385/1393525338/" class="ssr-a ">Typescript类型运算</a></li>
+<li class="ssr-li"><a href="/zh/posts/3300794385/3680080234/" class="ssr-a ">使用ts-compiler来遍历AST处理你的代码</a></li>
+<li class="ssr-li"><a href="/zh/posts/3300794385/3783534706/" class="ssr-a ">远程kv缓存优化</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">React-Hooks</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/3451527288/1361967700/" class="ssr-a ">Use progress</a></li>
+<li class="ssr-li"><a href="/zh/posts/3451527288/1793779673/" class="ssr-a ">Use interval</a></li>
+<li class="ssr-li"><a href="/zh/posts/3451527288/865364992/" class="ssr-a ">Use copy</a></li>
+<li class="ssr-li"><a href="/zh/posts/3451527288/1826049885/" class="ssr-a ">Use async</a></li>
+<li class="ssr-li"><a href="/zh/posts/3451527288/2956032774/" class="ssr-a ">Use modal</a></li>
+<li class="ssr-li"><a href="/zh/posts/3451527288/1422930357/" class="ssr-a ">Use router</a></li>
+<li class="ssr-li"><a href="/zh/posts/3451527288/3312377071/" class="ssr-a ">Use echarts</a></li>
+<li class="ssr-li"><a href="/zh/posts/3451527288/1763185345/" class="ssr-a ">Use timer</a></li>
+<li class="ssr-li"><a href="/zh/posts/3451527288/351511116/" class="ssr-a ">Use load script</a></li>
+<li class="ssr-li"><a href="/zh/posts/3451527288/294402496/" class="ssr-a ">Use derived state from props</a></li>
+<li class="ssr-li"><a href="/zh/posts/3451527288/2140043833/" class="ssr-a ">Use intersection</a></li>
+<li class="ssr-li"><a href="/zh/posts/3451527288/3653149325/" class="ssr-a ">Use input history</a></li>
+<li class="ssr-li"><a href="/zh/posts/3451527288/1224126869/" class="ssr-a ">Use form modal</a></li>
+<li class="ssr-li"><a href="/zh/posts/3451527288/3122065372/" class="ssr-a ">useI18N</a></li>
+<li class="ssr-li"><a href="/zh/posts/3451527288/3769657112/" class="ssr-a ">Use set partical state</a></li></ul></li>
+<li class="ssr-li"><div class="ssr-dir ">
+  <svg class="TreeBtn" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" style="transform: rotateX(0deg); transition: transform 0.2s ease 0s;"><g transform="translate(904.92214,-879.1482)"><path d=" m -673.67664,1221.6502 -231.2455,-231.24803 55.6165, -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894, 0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892, -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696, -174.68583 0.6895,0 26.281,25.03215 56.8701, 55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864 -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688, -104.0616 -231.873,-231.248 z
+" fill="currentColor"></path></g></svg>
+  <span class="ssr-div-name">Nest js</span></div><ul class="ssr-ul"><li class="ssr-li"><a href="/zh/posts/1017805429/1705031488/" class="ssr-a ">参数字段过滤器</a></li>
+<li class="ssr-li"><a href="/zh/posts/1017805429/3397853211/" class="ssr-a ">类加载关系及异常定位</a></li>
+<li class="ssr-li"><a href="/zh/posts/1017805429/1540140499/" class="ssr-a ">定时</a></li>
+<li class="ssr-li"><a href="/zh/posts/1017805429/458686663/" class="ssr-a ">entity设计规范</a></li>
+<li class="ssr-li"><a href="/zh/posts/1017805429/2271973388/" class="ssr-a ">使用nowsh-serverless部署nestjs</a></li>
+<li class="ssr-li"><a href="/zh/posts/1017805429/382985625/" class="ssr-a ">nestjs断点调试</a></li></ul></li></ul></div>
+      </div>
+    </div></div><div id="root"></div></body></html>
